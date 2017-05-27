@@ -4,26 +4,38 @@
       <meta charset="utf-8">
       <title>HTML Academy: Пинк</title>
     </head>
-    <body>
+    <body class="main-page">
       <header class="page-header">
-        <nav class="main-nav">
-          <div class="main-nav__header">
-            <a class="logo">
-              <img src="logo.svg" width="" height="" alt="Пинк">
-            </a>
-            <span class="main-nav__toggler"></span>
+        <div class="page-header__menu-wrapper">
+          <a class="logo">
+            <img src="logo.svg" width="" height="" alt="Пинк">
+          </a>
+          <span class="nav-toggler"></span>
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a>Главная</a></li>
+              <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+              <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+              <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="page-header__intro">
+        </div>
+        <article class="download">
+          <div class="download__inner">
+            <a class="download__btn" href="https://www.apple.com/itunes">Скачать приложение</a>
+            <div class="download__links">
+              <a class="download__link" "download__link--apple" href="https://www.apple.com/itunes"></a>
+              <a class="download__link" "download__link--android" href="https://play.google.com/store"></a>
+              <a class="download__link" "download__link--windows" href="https://www.microsoft.com/ru-ru/store"></a>
+            </div>
+            <p class="download__descr">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
           </div>
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a>Главная</a></li>
-            <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
-            <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-            <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
-          </ul>
-        </nav>
+        </article>
       </header>
       <main>
-        <section class="promo">
-        </section>
+
       </main>
     </body>
   </html>
