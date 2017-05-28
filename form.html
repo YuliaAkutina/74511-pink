@@ -25,8 +25,70 @@
         </div>
       </header>
       <main>
-
-
+        <form class="contest-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="contest-form__header">
+            <h2 class="contest-form__title">Форма для участия в конкурсе</h2><!--скрыт-->
+            <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+          </div>
+          <fieldset class="contest-form__item">
+            <label class="contest-form__field-text-label" for="surname-field">Фамилия</label>
+            <input type="text" name="surname" id="surname-field" placeholder="Укажите фамилию*" required>
+            <label class="contest-form__field-text-label" for="name-field">Имя</label>
+            <input type="text" name="name" id="name-field" placeholder="Введите ваше имя*" required>
+            <label class="contest-form__field-text-label" for="patronymic-field">Отчество</label>
+            <input type="text" name="patronymic" id="patronymic-field" placeholder="Ну и отчество тоже">
+          </fieldset>
+          <fieldset class="contest-form__item contest-form--bg-grey">
+            <legend class="contest-form__item-title">Ваши безбашенные достижения в путешествии</legend>
+            <input type="checkbox" name="checkbox-1" id="checkbox-1-field" checked>
+            <label class="contest-form__checkbox-label" for="checkbox-1-field">Сделал селфи с акулой</label>
+            <input type="checkbox" name="checkbox-2" id="checkbox-2-field" checked>
+            <label class="contest-form__checkbox-label" for="checkbox-2-field">Обгорел на пляже</label>
+            <input type="checkbox" name="checkbox-3" id="checkbox-3-field">
+            <label class="contest-form__checkbox-label" for="checkbox-3-field">Видел Чака Норриса</label>
+            <input type="checkbox" name="checkbox-4" id="checkbox-4-field">
+            <label class="contest-form__checkbox-label" for="checkbox-4-field">Накупил сувениров</label>
+            <input type="checkbox" name="checkbox-5" id="checkbox-5-field" checked>
+            <label class="contest-form__checkbox-label" for="checkbox-5-field">Удержал башню</label>
+            <input type="checkbox" name="checkbox-6" id="checkbox-6-field">
+            <label class="contest-form__checkbox-label" for="checkbox-6-field">Разгромил отель</label>
+          </fieldset>
+          <fieldset class="contest-form__item">
+            <label class="contest-form__field-text-label" for="tel-field">Номер телефона</label>
+            <input type="tel" name="tel" id="tel-field" placeholder="Номер, пожалуйста">
+            <label class="contest-form__field-text-label" for="email-field">Адрес почты</label>
+            <input type="email" name="email" id="email-field" placeholder="Введите почту*" required>
+          </fieldset>
+          <fieldset class="contest-form__item contest-form__item--bg-grey">
+            <legend class="contest-form__item-title">С каким приложением путешествовали?</legend>
+            <input type="radio" name="app" id="app-ios-field" checked>
+            <label class="contest-form__radio-label" for="app-ios-field">Pink для iOS</label>
+            <input type="radio" name="app" id="app-android-field">
+            <label class="contest-form__radio-label" for="app-android-field">Pink на Android</label>
+            <input type="radio" name="app" id="app-wp-field">
+            <label class="contest-form__radio-label" for="app-wp-field">Windows Phone</label>
+          </fieldset>
+          <fieldset class="contest-form__item">
+            <legend class="contest-form__item-title">Опишите свои эмоции</legend>
+            <textarea name="impression" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </fieldset>
+          <div class="contest-form__action">
+            <button class="btn contest-form__send" type="submit">Отправить форму</button>
+            <span class="contest-form__note"><span class="contest-form__ast">*</span> — обязательные поля</span>
+          </div>
+          <div class="popup popup--ready">
+            <h3>Ваша заявка отправлена</h3>
+            <p>Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+            <div class="popup__btn-wrapper">
+              <button class="btn btn--popup-close" type="button">Закрыть окно</button>
+            </div>
+          </div>
+          <div class="popup popup--error">
+            <h3>Что-то пошло не так!</h3>
+            <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+            <button class="btn btn--popup-close" type="button">OK</button>
+          </div>
+        </form>
       </main>
       <footer class="page-footer">
         <div class="page-footer__wrapper">
