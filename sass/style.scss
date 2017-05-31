@@ -1,0 +1,31 @@
+@import "normalize.scss";
+
+@import "variables.scss";
+@import "mixins.scss";
+
+@import "global/fonts.scss";
+@import "global/base.scss";
+
+@import "blocks/main-page.scss";
+@import "blocks/photo-page.scss";
+@import "blocks/contest-page.scss";
+@import "blocks/page-header.scss";
+@import "blocks/logo.scss";
+@import "blocks/nav-toggler.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/download.scss";
+@import "blocks/advantages.scss";
+@import "blocks/reviews.scss";
+@import "blocks/slider.scss";
+@import "blocks/price.scss";
+@import "blocks/flag.scss";
+@import "blocks/contacts.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/social-links.scss";
+@import "blocks/social-link.scss";
+@import "blocks/photo.scss";
+@import "blocks/photo-post.scss";
+@import "blocks/photo-editor.scss";
+@import "blocks/contest-form.scss";
+@import "blocks/popup.scss";
+@import "blocks/btn.scss";
