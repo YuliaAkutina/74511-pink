@@ -1,11 +1,14 @@
 /* Размер шрифта */
 $font-size--small: 14px;
 $font-size--small-1: 18px;
+$font-size--small-2: 24px;
 
 
 /* Интерлиньяж */
 $line-height--small: 30px;
 $line-height--small-nav: 32px;
+$line-height--small-1: 24px;
+$line-height--small-2: 18px;
 
 /* Жирность шрифта*/
 $light: 300;
@@ -17,4 +20,7 @@ $font-family: "Open Sans", "Arial", sans-serif;
 
 /* Цвета */
 $color--blue: #283645;
-$color--gray: #485461;
+$color--dark-blue: #1d2631;
+$color--gray: #f2f2f2;
+$color--pink: #d22856;
+$color--pink-opacity: rgba(210, 40, 86, 0.3);

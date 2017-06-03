@@ -1,0 +1,45 @@
+.slider input[type="radio"] {
+  display: none;
+}
+
+.slider__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 58px;
+}
+
+.slider__control {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+.slide {
+  display: none;
+}
+
+#slide-1:checked ~ .slide:nth-of-type(1) {
+  display: block;
+}
+
+#slide-2:checked ~ .slide:nth-of-type(2) {
+  display: block;
+}
+
+#slide-3:checked ~ .slide:nth-of-type(3) {
+  display: block;
+}
+
+#slide-1:checked ~ .slider__controls label[for="slide-1"],
+#slide-2:checked ~ .slider__controls label[for="slide-2"],
+#slide-3:checked ~ .slider__controls label[for="slide-3"] {
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border: 3px solid $color--blue;
+}

@@ -9,11 +9,13 @@
       <header class="page-header">
         <div class="page-header__menu">
           <div class="page-header__menu-top">
-            <h1 class="page-header__title">Pink — фотоприложение для вас!</h1><!--скрыт!-->
-            <a class="page-header__logo">
-              <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Пинк">
-            </a>
-            <span class="nav-toggler">Меню</span>
+            <div class="container page-header__menu-top-inner">
+              <h1 class="page-header__title">Pink — фотоприложение для вас!</h1><!--скрыт!-->
+                <a class="page-header__logo">
+                  <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Пинк">
+                </a>
+                <span class="nav-toggler">Меню</span>
+            </div>
         </div>
           <nav class="main-nav">
             <ul class="main-nav__list">
@@ -25,9 +27,11 @@
           </nav>
         </div>
         <div class="page-header__intro">
+          <div class="page-header__intro-bg container">
+          </div>
         </div>
         <section class="download">
-          <div class="download__inner">
+          <div class="download__inner container">
             <h2 class="download__title">Загрузка приложения</h2><!--скрыт!-->
             <a class="download__btn" href="https://www.apple.com/itunes/">Скачать приложение</a>
             <div class="download__links">
@@ -42,42 +46,47 @@
       <main>
         <section class="advantages">
           <header class="advantages__header">
-            <h2 class="advantages__title">Наши предложения</h2><!--скрыт!-->
-            <p class="advantage__intro">Устали от серости мегаполиса?</p>
-            <p class="advantage__intro">Нам есть, что вам предложить!</p>
+            <div class="advantages__header-inner container">
+              <h2 class="advantages__title">Наши предложения</h2><!--скрыт!-->
+              <p class="advantage__intro">Устали от серости мегаполиса?</p>
+              <p class="advantage__intro">Нам есть, что вам предложить!</p>
+            <div>
           </header>
           <div class="advantages__items">
-            <div class="advantages__item">
-              <h3 class="advantages__item-title">Поднимает настроение</h3>
-              <p class="advantages__item-descr">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            </div>
-            <div class="advantages__item">
-              <h3 class="advantages__item-title">Меняет мир вокруг</h3>
-              <p class="advantages__item-descr">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </div>
-            <div class="asvantages__item">
-              <h3 class="advantages__item-title">Заводит новых друзей</h3>
-              <p class="advantages__item-descr">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-            </div>
+            <div class="advantages__items-inner container">
+              <div class="advantages__item">
+                <h3 class="advantages__item-title">Поднимает настроение</h3>
+                <p class="advantages__item-descr">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              </div>
+              <div class="advantages__item">
+                <h3 class="advantages__item-title">Меняет мир вокруг</h3>
+                <p class="advantages__item-descr">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              </div>
+              <div class="advantages__item">
+                <h3 class="advantages__item-title">Заводит новых друзей</h3>
+                <p class="advantages__item-descr">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+             </div>
+          </div>
           </div>
         </section>
         <section class="reviews">
-          <div class="reviews-wrapper slider">
+          <div class="reviews-wrapper slider container">
             <h2 class="reviews__title">Отзывы о нас</h2><!--скрыт!-->
             <input type="radio" name="slide-toggler" id="slide-1" checked>
             <input type="radio" name="slide-toggler" id="slide-2">
             <input type="radio" name="slide-toggler" id="slide-3">
-            <div class="slider__controls">
+            <div class="reviews__label slider__controls">
               <label class="slider__control" for="slide-1"></label>
               <label class="slider__control" for="slide-2"></label>
               <label class="slider__control" for="slide-3"></label>
             </div>
+
             <blockquote class="reviews__item slide">
               <b class="reviews__author">Николай Петров</b>
               <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote>
             <blockquote class="reviews__item slide">
-              <b class="reviews__author">Николай Петров</b>
+              <b class="reviews__author">Игорь Петров</b>
               <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote>
             <blockquote class="reviews__item slide">
@@ -96,6 +105,7 @@
             <label class="slider__control" for="column-2"></label>
             <label class="slider__control" for="column-3"></label>
           </div>
+          <div class="price__table-wrapper">
           <table class="price__table">
             <tr>
               <th>
@@ -156,6 +166,7 @@
               </td>
             </tr>
           </table>
+        </div>
         </section>
         <section class="contacts">
           <div class="contacts__wrapper">
@@ -182,7 +193,7 @@
         </section>
       </main>
       <!--футер скрыт в мобильной версии-->
-      <footer class="page-footer">
+      <!--<footer class="page-footer">
         <div class="page-footer__wrapper">
           <a class="page-footer__logo" href="index.html">
             <img src="img/logo-footer.svg" width="147" height="40" alt="Пинк">
@@ -198,6 +209,6 @@
             Разработано <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </p>
         </div>
-      </footer>
+      </footer>-->
     </body>
   </html>

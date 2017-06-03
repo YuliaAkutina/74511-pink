@@ -1,6 +1,7 @@
 .main-nav {
   margin: 0;
   padding: 0;
+  width: 100%;
   line-height: $line-height--small-nav;
   font-size: $font-size--small-1;
   font-weight: $bold;
@@ -15,7 +16,7 @@
   align-items: center;
   margin: 0;
   padding: 0;
-  width: 320px;
+  width: 100%;
   list-style: none;
   border-bottom: 1px solid #000;
 }
@@ -35,4 +36,12 @@
   padding-bottom: 15px;
   color: #fff;
   text-decoration: none;
+
+  &:hover {
+    color: $color--pink;
+  }
+
+  &:active {
+    color: $color--pink-opacity;
+  }
 }

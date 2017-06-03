@@ -1,0 +1,70 @@
+.download {
+  margin: 0;
+  font-size: $font-size--small;
+  line-height: $line-height--small-1;
+  color: #fff;
+  background-color: $color--dark-blue;
+}
+
+.download__inner {
+  min-height: 271px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.download__title {
+  margin: 0;
+  padding: 0;
+  @include readers-only();
+}
+
+.download a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.download__btn {
+  margin-top: 28px;
+  padding: 16px 0;
+  align-self: stretch;
+  font-size: $font-size--small-1;
+  line-height: $line-height--small-2;
+  font-weight: $bold;
+  text-align: center;
+  border: 3px solid #fff;
+  border-radius: 31px;
+}
+
+.download__links {
+  width: 205px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0;
+}
+
+.download__link {
+  width: 50px;
+  height: 58px;
+}
+
+.download__link--apple {
+  background: url("../img/logo-apple.svg") no-repeat 0 0;
+}
+
+.download__link--android {
+  background: url("../img/logo-android.svg") no-repeat 2px 10px;
+}
+
+.download__link--windows {
+  background: url("../img/logo-microsoft.svg") no-repeat 5px 13px;
+}
+
+.download__descr {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font-weight: $light;
+  text-align: center;
+}

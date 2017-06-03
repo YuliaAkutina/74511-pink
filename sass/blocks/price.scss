@@ -1,0 +1,19 @@
+.price {
+  background: $color--gray;
+}
+
+.price__title {
+  margin: 0;
+  padding: 0;
+  @include readers-only();
+}
+
+price__table-wrapper {
+  /*width: 100%;
+  overflow: hidden;*/
+}
+
+.price__table {
+  /*width: 300%;*/
+
+}
