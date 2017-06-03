@@ -1,11 +1,20 @@
 /* Размер шрифта */
-$font-size--base: 14px;
+$font-size--small: 14px;
+$font-size--small-1: 18px;
 
 
 /* Интерлиньяж */
-$line-height--base: 30px;
+$line-height--small: 30px;
+$line-height--small-nav: 32px;
 
+/* Жирность шрифта*/
+$light: 300;
+$normal: 400;
+$bold: 700;
 
+/* Шрифт */
+$font-family: "Open Sans", "Arial", sans-serif;
 
 /* Цвета */
-$text-color--main: #283645;
+$color--blue: #283645;
+$color--gray: #485461;
