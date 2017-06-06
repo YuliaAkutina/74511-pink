@@ -1,3 +1,5 @@
+
+/*Меню открыто, крестик*/
 .nav-toggler {
   display: block;
   width: 50px;
@@ -6,4 +8,10 @@
   background-image: url("../img/icon-menu-cross.svg");
   background-repeat: no-repeat;
   background-position: 25px 0;
+
+  /*Меню закрыто, гамбургер*/
+  &--close {
+    background-image: url("../img/icon-menu-burger.svg");
+    background-position: 0 0;
+  }
 }

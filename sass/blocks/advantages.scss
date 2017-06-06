@@ -1,6 +1,6 @@
 .advantages {
-  font-size: $font-size--small;
-  line-height: $line-height--small-1;
+  font-size: 14px;
+  line-height: 24px;
   color: $color--blue;
   background-color: #fff;
 }
@@ -18,8 +18,6 @@
 }
 
 .advantages__title {
-  margin: 0;
-  padding: 0;
   @include readers-only();
 }
 
@@ -28,7 +26,7 @@
   margin-bottom: 30px;
   padding: 0;
   width: 204px;
-  font-size: $font-size--small-2;
+  font-size: 24px;
   line-height: 1.2;
   font-weight: $light;
   text-align: center;
@@ -52,7 +50,7 @@
     display: block;
     width: 100%;
     height: 26px;
-    background: url("../img/bg-triangle-white.svg") no-repeat 50% 50%; /*Почему полоска черная?*/
+    background: url("../img/bg-triangle-white.svg") no-repeat 50% 50%;
   }
 
   &::after {
@@ -76,14 +74,15 @@
 
 .advantages__item {
   text-align: center;
+  max-width: 100%;
 }
 
 .advantages__item-title {
   margin: 0;
   margin-bottom: 11px;
   padding: 0;
-  font-size: $font-size--small-1;
-  line-height: $line-height--small-1;
+  font-size: 18px;
+  line-height: 24px;
   font-weight: $bold;
   color: #000;
 }

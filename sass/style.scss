@@ -7,9 +7,6 @@
 @import "global/scaffolding.scss";
 @import "global/type.scss";
 
-@import "blocks/main-page.scss";
-@import "blocks/photo-page.scss";
-@import "blocks/contest-page.scss";
 @import "blocks/container.scss";
 @import "blocks/page-header.scss";
 @import "blocks/logo.scss";
@@ -18,9 +15,10 @@
 @import "blocks/download.scss";
 @import "blocks/advantages.scss";
 @import "blocks/reviews.scss";
+@import "blocks/review.scss";
 @import "blocks/slider.scss";
 @import "blocks/price.scss";
-@import "blocks/flag.scss";
+@import "blocks/flag-hit.scss";
 @import "blocks/contacts.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/social-links.scss";

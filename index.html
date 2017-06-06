@@ -5,19 +5,19 @@
       <title>HTML Academy: Пинк</title>
       <link href="css/style.css" rel="stylesheet">
     </head>
-    <body class="main-page">
+    <body>
       <header class="page-header">
         <div class="page-header__menu">
-          <div class="page-header__menu-top">
-            <div class="container page-header__menu-top-inner">
+          <div class="page-header__menu-top"><!--page-header__menu-top--close - меню закрыто -->
+            <div class="page-header__menu-top-inner container">
               <h1 class="page-header__title">Pink — фотоприложение для вас!</h1><!--скрыт!-->
-                <a class="page-header__logo">
-                  <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Пинк">
-                </a>
-                <span class="nav-toggler">Меню</span>
+              <a class="page-header__logo">
+                <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Пинк">
+              </a>
+              <span class="nav-toggler">Меню</span><!--nav-toggler--close - меню закрыто, гамбургер -->
             </div>
-        </div>
-          <nav class="main-nav">
+          </div>
+          <nav class="main-nav"><!--main-nav--close - меню закрыто-->
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item--current"><a>Главная</a></li>
               <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
@@ -80,27 +80,30 @@
               <label class="slider__control" for="slide-2"></label>
               <label class="slider__control" for="slide-3"></label>
             </div>
-
-            <blockquote class="reviews__item slide">
-              <b class="reviews__author">Николай Петров</b>
-              <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </blockquote>
-            <blockquote class="reviews__item slide">
-              <b class="reviews__author">Игорь Петров</b>
-              <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </blockquote>
-            <blockquote class="reviews__item slide">
-              <b class="reviews__author">Николай Петров</b>
-              <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </blockquote>
+            <div class="reviews__slide-wrapper">
+              <div class="reviews__slides">
+                <blockquote class="reviews__slide review">
+                  <b class="review__author">Николай Петров</b>
+                  <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                </blockquote>
+                <blockquote class="reviews__slide review">
+                  <b class="review__author">Игорь Петров</b>
+                  <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                </blockquote>
+                <blockquote class="reviews__slide review">
+                  <b class="review__author">Иван Петров</b>
+                  <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                </blockquote>
+              </div>
+            </div>
           </div>
         </section>
         <section class="price slider">
-          <h2 class="price__title">Наши тарифы</h2><!--скрыт!-->
+          <h2 class="price__title-main">Наши тарифы</h2><!--скрыт!-->
           <input type="radio" name="column-toggler" id="column-1">
           <input type="radio" name="column-toggler" id="column-2" checked>
           <input type="radio" name="column-toggler" id="column-3">
-          <div class="slider__controls">
+          <div class="price__label slider__controls">
             <label class="slider__control" for="column-1"></label>
             <label class="slider__control" for="column-2"></label>
             <label class="slider__control" for="column-3"></label>
@@ -112,7 +115,7 @@
                 <p class="price__title">База</p>
                 <p class="price__value">1,99 USD</p>
               </th>
-              <th class="flag flag--hit">
+              <th class="flag-hit">
                 <div class="flag__inner">
                   <p class="price__title">Стандарт</p>
                   <p class="price__value">3,99 USD</p>
@@ -125,68 +128,88 @@
             </tr>
             <tr>
               <td>
-                <span class="price__service-item">Розовый фильтр</span>
-                <span class="price__included">Есть</span>
+                <div class="price__cell-wrapper">
+                  <span class="price__service-item">Розовый фильтр</span>
+                  <span class="price__included">Есть</span>
+               </div>
               </td>
               <td>
-                <span class="price__service-item">Розовый фильтр</span>
-                <span class="price__included">Есть</span>
+                <div class="price__cell-wrapper">
+                  <span class="price__service-item">Розовый фильтр</span>
+                  <span class="price__included">Есть</span>
+                </div>
               </td>
               <td>
-                <span class="price__service-item">Розовый фильтр</span>
-                <span class="price__included">Есть</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span class="price__service-item">Смайлики</span>
-                <span class="price__included price__included--off">Нет</span>
-              </td>
-              <td>
-                <span class="price__service-item">Смайлики</span>
-                <span class="price__included">Есть</span>
-              </td>
-              <td>
-                <span class="price__service-item">Смайлики</span>
-                <span class="price__included">Есть</span>
+                <div class="price__cell-wrapper">
+                  <span class="price__service-item">Розовый фильтр</span>
+                  <span class="price__included">Есть</span>
+              </div>
               </td>
             </tr>
             <tr>
               <td>
-                <span class="price__service-item">Комментарии</span>
-                <span class="price__included price__included--off">Нет</span>
+                <div class="price__cell-wrapper">
+                  <span class="price__service-item">Смайлики</span>
+                  <span class="price__included price__included--off">Нет</span>
+                </div>
               </td>
               <td>
-                <span class="price__service-item">Комментарии</span>
-                <span class="price__included price__included--off">Нет</span>
+                <div class="price__cell-wrapper">
+                  <span class="price__service-item">Смайлики</span>
+                  <span class="price__included">Есть</span>
+                </div>
               </td>
               <td>
-                <span class="price__service-item">Комментарии</span>
-                <span class="price__included">Есть</span>
+                <div class="price__cell-wrapper">
+                  <span class="price__service-item">Смайлики</span>
+                  <span class="price__included">Есть</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="price__cell-wrapper">
+                  <span class="price__service-item">Комментарии</span>
+                  <span class="price__included price__included--off">Нет</span>
+                </div>
+              </td>
+              <td>
+                <div class="price__cell-wrapper">
+                  <span class="price__service-item">Комментарии</span>
+                  <span class="price__included price__included--off">Нет</span>
+                </div>
+              </td>
+              <td>
+                <div class="price__cell-wrapper">
+                  <span class="price__service-item">Комментарии</span>
+                  <span class="price__included">Есть</span>
+                </div>
               </td>
             </tr>
           </table>
         </div>
         </section>
         <section class="contacts">
-          <div class="contacts__wrapper">
+          <div class="contacts__wrapper container">
             <header class="contacts__header">
               <h2 class="contacts__title">Наши контакты</h2><!--скрыт!-->
               <p class="contacts__intro">Остались вопросы?</p>
-              <p class="contacts__intro">Свяжитесь с нами</p>
+              <p class="contacts__intro">Свяжитесь с нами!</p>
             </header>
-            <div class="contacts__item contacts__item--tel">
-              <p class="contacts__item-title">Звоните:</p>
-              <p class="contacts__info"><a href="tel:+78125556666">+7 (812) 555-66-66</a></p>
-            </div>
-            <div class="contacts__item contacts__item--email">
-              <p class="contacts__item-title">Пишите:</p>
-              <p class="contacts__info"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-            </div>
-            <div class="contacts__item contacts__item--address">
-              <p class="contacts__item-title">Приезжайте в гости:</p>
-              <p class="contacts__info">ул. Большая Конюшенная, 19/8</p>
-            </div>
+            <div class="contacts__items">
+              <div class="contacts__item contacts__item--tel">
+                <p class="contacts__item-title">Звоните:</p>
+                <p class="contacts__info"><a href="tel:+78125556666">+7 (812) 555-66-66</a></p>
+              </div>
+              <div class="contacts__item contacts__item--email">
+                <p class="contacts__item-title">Пишите:</p>
+                <p class="contacts__info"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+              </div>
+              <div class="contacts__item contacts__item--address">
+                <p class="contacts__item-title">Приезжайте в гости:</p>
+                <p class="contacts__info">ул. Большая Конюшенная, 19/8</p>
+              </div>
+          </div>
           </div>
           <div class="contacts__map">
           </div>
