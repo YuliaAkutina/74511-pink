@@ -1,0 +1,88 @@
+.advantages {
+  font-size: 14px;
+  line-height: 24px;
+  color: $color--blue;
+  background-color: #fff;
+}
+
+.advantages__header {
+  padding-top: 40px;
+  padding-bottom: 33px;
+}
+
+.advantages__header-inner {
+
+}
+
+.advantages__title {
+  @include readers-only();
+}
+
+.advantage__intro {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 0;
+  width: 204px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: $light;
+  text-align: center;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.advantages__items {
+  position: relative;
+  padding-top: 81px;
+  padding-bottom: 288px;
+  background-color: $color--gray;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 26px;
+    background: url("../img/bg-triangle-white.svg") no-repeat 50% 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 278px;
+    background: url("../img/iphone-screen-mobile@1x.png") no-repeat 50% 0;
+    background-size: 157px auto;
+  }
+}
+
+.advantages__items-inner {
+}
+
+.advantages__item {
+  text-align: center;
+  max-width: 100%;
+}
+
+.advantages__item-title {
+  margin: 0;
+  margin-bottom: 11px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: $bold;
+  color: #000;
+}
+
+.advantages__item-descr {
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+}

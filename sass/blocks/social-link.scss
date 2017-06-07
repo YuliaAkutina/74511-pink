@@ -1,0 +1,18 @@
+.social-link {
+  width: 44px;
+  height: 44px;
+  border: 3px solid $color--light-gray;
+  border-radius: 50%;
+
+  &--tw {
+    background: url("../img/icon-twitter.svg") no-repeat 50% 50%;
+  }
+
+  &--fb {
+    background: url("../img/icon-facebook.svg") no-repeat 50% 50%;
+  }
+
+  &--ytb {
+    background: url("../img/icon-youtube.svg") no-repeat 50% 50%;
+  }
+}

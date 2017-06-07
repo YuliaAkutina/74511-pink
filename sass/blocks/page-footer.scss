@@ -1,0 +1,49 @@
+.page-footer {
+  margin: 0;
+  padding: 40px 0;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color--blue;
+  background-color: #fff;
+}
+
+.page-footer__wrapper {
+  text-align: center;
+}
+
+.page-footer__logo {
+  display: block;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 147px;
+  height: 40px;
+  margin-bottom: 40px;
+}
+
+.page-footer__social {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+  padding: 0;
+  width: 177px;
+}
+
+.page-footer__copyright {
+  margin: 0 auto;
+  padding: 0;
+  width: 142px;
+}
+
+.page-footer__copyright-link {
+  display: inline-block;
+  margin-left: 10px;
+  width: 40px;
+  height: 42px;
+  vertical-align: middle;
+  font-size: 0;
+  color: $color--blue;
+  text-decoration: none;
+  background: url("../img/htmlacademy.svg") no-repeat 50% 50%;
+}

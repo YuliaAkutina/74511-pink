@@ -1,0 +1,17 @@
+@mixin readers-only() {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+}
+
+@mixin slide-active() {
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border: 3px solid $color--blue;
+}

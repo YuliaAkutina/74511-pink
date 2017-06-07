@@ -1,0 +1,25 @@
+.photo {
+  font-size: 14px;
+  line-height: 30px;
+  color: $color--blue;
+  background-color: #fff;
+}
+
+.photo__header {
+  padding-top: 44px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.photo__title {
+  @include readers-only();
+}
+
+.photo__intro {
+  margin: 0;
+  padding: 0;
+  padding-left: 18px;
+  padding-right: 18px;
+  margin-bottom: 30px;
+  text-align: center;
+}

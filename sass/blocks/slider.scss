@@ -1,0 +1,19 @@
+.slider input[type="radio"] {
+  display: none;
+}
+
+.slider__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 58px;
+}
+
+.slider__control {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+}

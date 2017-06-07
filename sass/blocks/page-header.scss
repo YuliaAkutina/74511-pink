@@ -1,0 +1,82 @@
+.page-header {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.page-header__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.page-header__title {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0;
+  width: 172px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: $light;
+
+  &--main-page {
+    @include readers-only();
+  }
+
+  &--form-page {
+    width: 228px;
+  }
+}
+
+.page-header__menu-top {
+  margin: 0;
+  width: 100%;
+  min-height: 70px;
+  background-color: $color--blue;
+
+  &--close {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.page-header__menu-top-inner {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__logo {
+  display: block;
+  margin: 0;
+  margin-right: auto;
+  margin-top: 22px;
+  margin-bottom: 26px;
+  width: 75px;
+  height: 22px;
+}
+
+.page-header__intro {
+  margin: 0;
+  min-height: 395px;
+  text-align: center;
+  background: $color--blue url("../img/bg-back-mobile@1x.jpg") no-repeat 50% -70px;
+
+  &--photo-page {
+    padding: 30px 20px;
+    min-height: 110px;
+  }
+
+  &--form-page {
+    padding: 30px 45px 32px 45px;
+    min-height: 95px;
+  }
+}
+
+.page-header__intro-bg {
+  min-height: 395px;
+  background: url("../img/iphone-hand-mobile@1x.png") no-repeat 0 110px;
+  background-size: auto;
+}
