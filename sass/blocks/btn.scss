@@ -1,0 +1,14 @@
+.btn {
+  display: block;
+  padding: 16px 20px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: $bold;
+  text-align: center;
+
+  &--circle {
+    border: 3px solid #fff;
+    border-radius: 31px;
+    background-color: transparent;
+  }
+}

@@ -25,30 +25,32 @@
             </ul>
           </nav>
         </div>
-        <div class="page-header__intro">
+        <div class="page-header__intro page-header__intro--photo-page">
           <h1 class="page-header__title">Фотографии пользователей</h1>
         </div>
       </header>
       <main>
         <section class="photo">
-          <header class="photo__header">
+          <header class="photo__header container">
             <h2 class="photo__title">Примеры фото наших пользователей</h2><!--скрыт-->
             <p class="photo__intro">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
           </header>
           <article class="photo-post photo-post--panorama">
-            <a href="#"><img src="img/photo-1.jpg" width="320" height="137" alt="Панорама дня"></a>
-            <div class="photo-post__text">
-              <h3 class="photo-post__title">
-                <b class="photo-post__author">Анна</b>
-                <time class="photo-post__date" datetime="2017-06-10 14:55">(5 минут назад)</time>
-              </h3>
-              <p>Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-              <span class="foto-post__like">Нравится: 215</span>
+            <a href="#"><img class="photo-post__img-panorama" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Панорама дня"></a>
+            <div class="foto-post__text-panorama-wrapper container">
+              <div class="photo-post__text photo-post__text--panorama">
+                <h3 class="photo-post__title">
+                  <b class="photo-post__author">Анна</b>
+                  <time class="photo-post__date" datetime="2017-06-10 14:55">(5 минут назад)</time>
+                </h3>
+                <p>Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+                <span class="foto-post__like">Нравится: 215</span>
+              </div>
             </div>
           </article>
-          <div class="photo__other-photos-wrapper">
+          <div class="photo__other-photos-wrapper container">
             <article class="photo-post">
-              <a href="#"><img src="img/photo-2.jpg" width="280" height="180" alt="Машина"></a>
+              <a href="#"><img src="img/photo-1-mobile@1x.jpg" width="280" height="180" alt="Машина"></a>
               <div class="photo-post__text">
                 <h3 class="photo-post__title">
                   <b class="photo-post__author">Левон</b>
@@ -59,7 +61,7 @@
               </div>
             </article>
             <article class="photo-post">
-              <a href="#"><img src="img/photo-3.jpg" width="280" height="180" alt="Барабанная установка"></a>
+              <a href="#"><img src="img/photo-2-mobile@1x.jpg" width="280" height="180" alt="Барабанная установка"></a>
               <div class="photo-post__text">
                 <h3 class="photo-post__title">
                   <b class="photo-post__author">Антон</b>
@@ -70,7 +72,7 @@
               </div>
             </article>
             <article class="photo-post">
-              <a href="#"><img src="img/photo-4.jpg" width="280" height="180" alt="Небо сквозь стеклянную крышу"></a>
+              <a href="#"><img src="img/photo-3-mobile@1x.jpg" width="280" height="180" alt="Небо сквозь стеклянную крышу"></a>
               <div class="photo-post__text">
                 <h3 class="photo-post__title">
                   <b class="photo-post__author">Борис</b>
@@ -81,7 +83,7 @@
               </div>
             </article>
             <article class="photo-post">
-              <a href="#"><img src="img/photo-5.jpg" width="280" height="180" alt="Кубанская бахча"></a>
+              <a href="#"><img src="img/photo-4-mobile@1x.jpg" width="280" height="180" alt="Кубанская бахча"></a>
               <div class="photo-post__text">
                 <h3 class="photo-post__title">
                   <b class="photo-post__author">Сергей</b>
@@ -92,7 +94,7 @@
               </div>
             </article>
             <article class="photo-post">
-              <a href="#"><img src="img/photo-6.jpg" width="280" height="180" alt="Вид с вершины холма"></a>
+              <a href="#"><img src="img/photo-5-mobile@1x.jpg" width="280" height="180" alt="Вид с вершины холма"></a>
               <div class="photo-post__text">
                 <h3 class="photo-post__title">
                   <b class="photo-post__author">Максим</b>
@@ -103,7 +105,7 @@
               </div>
             </article>
             <article class="photo-post">
-              <a href="#"><img src="img/photo-7.jpg" width="280" height="180" alt="Самолет в небе"></a>
+              <a href="#"><img src="img/photo-6-mobile@1x.jpg" width="280" height="180" alt="Самолет в небе"></a>
               <div class="photo-post__text">
                 <h3 class="photo-post__title">
                   <b class="photo-post__author">Надежда</b>
@@ -116,45 +118,49 @@
           </div>
         </section>
         <section class="photo-editor">
-          <header class="photo-editor__header">
+          <header class="photo-editor__header container">
             <h2 class="photo-editor__title">Обработка и публикация ваших фото</h2><!--скрыт-->
             <p class="photo-editor__intro">Затмите их всех!</p>
             <p class="photo-editor__intro">Выкладывайте все, что накопилось в телефоне!</p>
           </header>
           <form class="photo-editor__form" action="https://echo.htmlacademy.ru/" method="post">
-            <div class="photo-editor__photo-select">
-              <img src="img/photo-editor.jpg" width="280" height="374" alt="Фото для обработки">
-            </div>
-            <div class="photo-editor__filter-controls">
-              <input type="radio" name="filter-toggler" id="filter-1" checked>
-              <input type="radio" name="filter-toggler" id="filter-2">
-              <input type="radio" name="filter-toggler" id="filter-3">
-              <label class="photo-editor__filter-toggler" for="filter-1"></label>
-              <label class="photo-editor__filter-toggler" for="filter-2"></label>
-              <label class="photo-editor__filter-toggler" for="filter-3"></label>
-            </div>
-            <div class="photo-editor__range-controls">
-              <div class="photo-editor__range-controls-wrapper">
-                <input class="range-filter" type="range" name="range-filter-1" id="range-filter-1">
+            <div class="photo-editor__form-inner">
+              <div class="photo-editor__photo-select container">
+                <img src="img/photo-7-mobile@1x.jpg" width="280" height="374" alt="Фото для обработки">
               </div>
-              <div class="photo-editor__range-controls-wrapper"><!--скрыт в мобильной версии-->
-                <input class="range-filter" type="range" name="range-filter-2" id="range-filter-2">
+              <div class="foto-edito__filter-controls-wrapper container">
+                <div class="photo-editor__filter-controls">
+                  <input type="radio" name="filter-toggler" id="filter-1" checked>
+                  <input type="radio" name="filter-toggler" id="filter-2">
+                  <input type="radio" name="filter-toggler" id="filter-3">
+                  <label class="photo-editor__filter-toggler photo-editor__filter-toggler--active" for="filter-1">Обрезка</label>
+                  <label class="photo-editor__filter-toggler" for="filter-2">Заливка</label>
+                  <label class="photo-editor__filter-toggler" for="filter-3">Контраст</label>
+                </div>
               </div>
-              <div class="photo-editor__range-controls-wrapper"><!--скрыт в мобильной версии-->
-                <input class="range-filter" type="range" name="range-filter-3" id="range-filter-3">
+              <div class="photo-editor__range-controls">
+                <div class="photo-editor__range-controls-wrapper">
+                  <input class="photo-editor__range-filter" type="range" name="range-filter-1" id="range-filter-1">
+                </div>
+                <div class="photo-editor__range-controls-wrapper"><!--скрыт в мобильной версии-->
+                  <input class="photo-editor__range-filter" type="range" name="range-filter-2" id="range-filter-2">
+                </div>
+                <div class="photo-editor__range-controls-wrapper"><!--скрыт в мобильной версии-->
+                  <input class="photo-editor__range-filter" type="range" name="range-filter-3" id="range-filter-3">
+                </div>
               </div>
-            </div>
-            <div class="photo-editor__action">
-              <button class="btn photo-editor__send" type="submit">Запостить</button>
-              <button class="btn photo-editor__reset" type="reset">Отмена</button>
+              <div class="photo-editor__action container">
+                <button class="photo-editor__send btn btn--circle" type="submit">Запостить</button>
+                <button class="photo-editor__reset btn btn--circle" type="reset">Отмена</button>
+              </div>
             </div>
           </form>
         </section>
       </main>
       <footer class="page-footer">
-        <div class="page-footer__wrapper">
+        <div class="page-footer__wrapper container">
           <a class="page-footer__logo" href="index.html">
-            <img src="img/logo-footer.svg" width="147" height="40" alt="Пинк">
+            <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Пинк">
           </a>
           <p class="page-footer__social">
             <span class="social-links">
@@ -164,7 +170,7 @@
             </span>
           </p>
           <p class="page-footer__copyright">
-            Разработано <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            Разработано<a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </p>
         </div>
       </footer>
