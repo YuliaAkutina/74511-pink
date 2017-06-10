@@ -10,10 +10,6 @@
   padding-bottom: 33px;
 }
 
-.advantages__header-inner {
-
-}
-
 .advantages__title {
   @include readers-only();
 }
@@ -63,9 +59,6 @@
   }
 }
 
-.advantages__items-inner {
-}
-
 .advantages__item {
   text-align: center;
   max-width: 100%;
@@ -85,4 +78,100 @@
   margin: 0;
   margin-bottom: 32px;
   padding: 0;
+}
+
+.advantages__item-descr br {
+  display: none;
+}
+
+.advantages__article {
+  display: none;
+}
+
+@media (min-width: $tablet) {
+
+  .advantages__header {
+    padding-top: 49px;
+    padding-bottom: 48px;
+  }
+
+  .advantage__intro {
+    margin-bottom: 0;
+    width: 100%;
+    font-size: 40px;
+
+    &:last-of-type {
+      width: 335px;
+    }
+  }
+
+  .advantages__items {
+    padding-top: 73px;
+    padding-bottom: 0;
+
+    &::before {
+      height: 52px;
+    }
+
+    &::after {
+      bottom: 0;
+      left: 20px;
+      /*Заменить картинку, как будет графика для планшетной версии*/
+      background: url("../img/iphone-screen-mobile@1x.png") no-repeat 0 0;
+      background-size: 157px auto;
+    }
+  }
+
+  .advantages__items-inner {
+    padding-left: 310px;
+  }
+
+  .advantages__item {
+    text-align: left;
+
+    &:last-child {
+      padding-bottom: 8px;
+    }
+  }
+
+  .advantages__item-descr {
+    margin-bottom: 35px;
+  }
+
+  .advantages__item-descr br {
+    display: inline;
+  }
+
+  .advantages__article {
+    display: block;
+  }
+
+  .asvantages__article-inner {
+    padding-top: 96px;
+    padding-bottom: 86px;
+    padding-left: 310px;
+  }
+
+  .advantages__article-title {
+    display: block;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: $bold;
+    color: #000;
+  }
+
+  .advantages__article-descr {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    width: 297px;
+  }
+
+  .advantages__article-link {
+    color: $color--pink;
+  }
+
 }

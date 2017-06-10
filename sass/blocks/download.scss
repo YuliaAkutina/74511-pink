@@ -11,6 +11,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include container();
 }
 
 .download__title {
@@ -60,4 +62,32 @@
   max-width: 100%;
   font-weight: $light;
   text-align: center;
+}
+
+@media (min-width: $tablet) {
+
+  .download {
+    font-size: 18px;
+    line-height: 24px;
+    width: 300px;
+    background-color: transparent;
+  }
+
+  .download__inner {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 80px;
+    width: 100%;
+  }
+
+  .download__btn {
+    margin-top: 10px;
+    margin-bottom: 45px;
+  }
+
+  .download__links {
+    margin-bottom: 36px;
+    max-width: 100%;
+  }
+
 }

@@ -74,10 +74,13 @@
   vertical-align: middle;
   border-left: 2px solid $color--gray;
   background-color: $color--blue;
-
 }
 
-.price__table th:first-of-type {
+.price__first-column {
+  display: none;
+}
+
+.price__table th:nth-of-type(2) {
   border: none;
 }
 
@@ -120,5 +123,93 @@
 }
 
 .price__included {
+
+}
+
+@media (min-width: $tablet) {
+
+  .price {
+    position: relative;
+    padding-top: 91px;
+    padding-bottom: 99px;
+
+    &::before {
+      top: 0;
+      left: 0;
+      height: 26px;
+      background: url("../img/bg-triangle-white.svg") no-repeat 50% 50%;
+    }
+  }
+
+  .price__label {
+     display: none;
+  }
+
+  .price__table-wrapper {
+   margin: 0 auto;
+   padding-left: 20px;
+   padding-right: 20px;
+   box-sizing: border-box;
+  }
+
+  .price__table {
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #column-2:checked ~ .price__table-wrapper .price__table  {
+    transform: translate(0);
+  }
+
+  #column-3:checked ~ .price__table-wrapper .price__table  {
+    transform: translate(0);
+  }
+
+  .price__table th {
+
+
+  }
+
+  .price__first-column {
+    display: table-cell;
+
+  }
+
+  .price__cell-empty {
+    visibility: hidden;
+  }
+
+  .price__title {
+    margin-bottom: 1px;
+
+    font-size: 16px;
+  }
+
+  .price__value {
+    font-size: 18px;
+
+  }
+
+  .price__table td {
+    border: 2px solid $color--gray;
+    border-top: none;
+    background-color: #fff;
+  }
+
+  .price__cell-wrapper {
+
+  }
+
+  .price__service-item {
+    display: none;
+  }
+
+
+
+  .price__included {
+    font-size: 0;
+
+  }
 
 }

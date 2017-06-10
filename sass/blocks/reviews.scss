@@ -59,3 +59,13 @@
 #slide-3:checked ~ .slider__controls label[for="slide-3"] {
   @include slide-active();
 }
+
+@media (min-width: $tablet) {
+
+  .reviews {
+    padding-top: 40px;
+    padding-bottom: 25px;
+    font-size: 18px;
+  }
+
+}

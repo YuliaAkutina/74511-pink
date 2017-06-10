@@ -71,10 +71,6 @@
   min-height: 395px;
   text-align: center;
 
-  &--main-page {
-
-  }
-
   &--photo-page {
     padding: 30px 20px;
     min-height: 110px;
@@ -98,5 +94,79 @@
   font-size: 40px;
   line-height: 1.2;
   font-weight: $light;
+  text-align: center;
   color: #fff;
+}
+
+@media (min-width: $tablet) {
+  /*Изображения добавлены временно для удобства стилизации, позже будет добавлена графика для планшета и десктопа*/
+  .page-header {
+    background-image: url("../img/iphone-hand-mobile@1x.png"),
+                      url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat,
+                       no-repeat;
+    background-position: 42% 699px,
+                         50% 270px;
+    background-size: auto,
+                     cover;
+    &--menu-close {
+      background-position: 42% 443px, 50% 0px;
+    }
+  }
+
+  .page-header__menu-top {
+    padding-top: 44px;
+    padding-bottom: 41px;
+    min-height: 25px;
+
+    &--close {
+      padding-top: 44px;
+      padding-bottom: 42px;
+    }
+  }
+
+  .page-header__menu-top-inner {
+    display: flex;
+    align-items: center;
+  }
+
+  .page-header__logo {
+    display: block;
+    margin: 0;
+    margin-right: auto;
+    width: 75px;
+    height: 22px;
+  }
+
+  .page-header__intro-wrapper {
+    @include container();
+  }
+
+  .page-header__intro {
+    padding-top: 91px;
+    padding-bottom: 20px;
+    padding-left: 34px;
+    min-height: 130px;
+
+    &--photo-page {
+      padding: 30px 20px;
+      min-height: 110px;
+    }
+
+    &--form-page {
+      padding: 30px 45px 32px 45px;
+      min-height: 95px;
+    }
+  }
+
+  .page-header__intro-bg {
+    min-height: 130px;
+    background: none;
+  }
+
+  .page-header__slogan {
+    display: block;
+    width: 190px;
+  }
+
 }
