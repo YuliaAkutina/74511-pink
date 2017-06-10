@@ -28,7 +28,7 @@
 .price__label {
   position: absolute;
   left: 50%;
-  bottom: 46px;
+  bottom: 47px;
   margin-left: -29px;
 }
 
@@ -104,7 +104,7 @@
 }
 
 .price__table td {
-  border: 2px solid $color--gray;
+  border: 2px solid $color--gray-border;
   border-top: none;
   background-color: #fff;
 }
@@ -113,7 +113,7 @@
   display: flex;
   justify-content: space-between;
   padding-top: 15px;
-  padding-bottom: 13px;
+  padding-bottom: 7px;
   padding-left: 23px;
   padding-right: 17px;
 }
@@ -123,21 +123,26 @@
 }
 
 .price__included {
+  display: block;
+  width: 36px;
+  height: 36px;
+  font-size: 0;
+  background: url("../img/icon-yes.svg") no-repeat 50% 50%;
 
+  &--off {
+    background-image: url("../img/icon-no.svg");
+    background-position: 50% 0;
+  }
 }
 
 @media (min-width: $tablet) {
 
   .price {
-    position: relative;
-    padding-top: 91px;
-    padding-bottom: 99px;
+    padding-top: 82px;
+    padding-bottom: 66px;
 
     &::before {
-      top: 0;
-      left: 0;
-      height: 26px;
-      background: url("../img/bg-triangle-white.svg") no-repeat 50% 50%;
+      height: 52px;
     }
   }
 
@@ -155,7 +160,6 @@
   .price__table {
     margin: 0;
     width: 100%;
-    box-sizing: border-box;
   }
 
   #column-2:checked ~ .price__table-wrapper .price__table  {
@@ -166,50 +170,63 @@
     transform: translate(0);
   }
 
-  .price__table th {
-
-
-  }
-
   .price__first-column {
     display: table-cell;
+    width: 25%;
 
+    &:first-of-type {
+      border-top: 2px solid $color--gray-border;
+    }
   }
 
   .price__cell-empty {
     visibility: hidden;
   }
 
-  .price__title {
-    margin-bottom: 1px;
+  .price__table th {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 13px;
+    padding-bottom: 8px;
+    width: 25%;
+  }
 
+  .price__title {
+    margin-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 16px;
   }
 
   .price__value {
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 18px;
-
   }
 
-  .price__table td {
-    border: 2px solid $color--gray;
-    border-top: none;
-    background-color: #fff;
+  .price__services {
+    display: block;
+    padding-left: 13px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    text-transform: none;
   }
 
   .price__cell-wrapper {
-
+    display: block;
+    padding: 0;
   }
 
   .price__service-item {
     display: none;
   }
 
-
-
   .price__included {
-    font-size: 0;
+    margin: 0 auto;
 
+    &--off {
+      background-position: 50% 50%;
+    }
   }
-
 }
