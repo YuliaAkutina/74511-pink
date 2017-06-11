@@ -7,6 +7,7 @@
   background-color: $color--gray;
 
   &--panorama {
+    position: relative;
     background-color: #fff;
   }
 
@@ -15,17 +16,50 @@
   }
 }
 
-.photo-post img {
+.photo-post__img {
   display: block;
+  width: 280px;
+  height: 180px;
+
+  &--panorama {
+    margin: 0 auto;
+    width: 320px;
+    height: 137px;
+  }
 }
 
-.photo-post__img-panorama {
-  width: 100%;
-  height: auto;
+.foto-post__link-panorama {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  width: 320px;
+  text-decoration: none;
+}
+
+.foto-post__link-panorama::before {
+  content: "Панорама дня";
+  position: absolute;
+  top: 0;
+  right: 20px;
+  z-index: 10;
+  display: block;
+  padding: 4px 10px;
+  padding-bottom: 8px;
+  min-width: 120px;
+  font-size: 12px;
+  font-weight: $bold;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $color--pink;
 }
 
 .photo-post__text {
-  padding: 17px 15px 16px 18px;
+  padding-left: 18px;
+  padding-right: 15px;
+  padding-top: 17px;
+  padding-bottom: 16px;
   text-align: left;
 
   &--panorama {
@@ -55,10 +89,29 @@
   padding: 0;
 }
 
+.photo-post__like-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+}
+
+.photo-post__heart {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 13px;
+  height: 24px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: url("../img/icon-heart.svg") no-repeat 50% 45%;
+}
+
 .photo-post__like {
+  align-self: center;
   display: block;
   margin-bottom: 5px;
-  padding-left: 32px;
   font-size: 12px;
   color: $color--pink;
   text-transform: uppercase;
@@ -81,14 +134,9 @@
   &--panorama {
     margin: 0;
     margin-bottom: 51px;
+    width: 660px;
   }
 }
-
-  .photo-post img {
-    display: block;
-    width: 300px;
-    height: 300px;
-  }
 
   .photo-post a {
     display: block;
@@ -96,15 +144,25 @@
     height: 300px;
   }
 
+/*временно, пока нет картинки с нужными размерами*/
   .photo-post--panorama a {
     display: block;
-    width: 100%;
+    width: 660px;
     height: 510px;
   }
 
-  .photo-post__img-panorama {
-    width: 660px;
-    height: 510px; /*временно, пока нет картинки с нужными размерами*/
+  .photo-post__img {
+    width: 300px;
+    height: 300px;
+
+    &--panorama {
+      width: 660px;
+      height: 510px;
+    }
+  }
+
+  .foto-post__link-panorama::before {
+    top: 57px;
   }
 
   .photo__other-photos-wrapper {
@@ -113,58 +171,51 @@
   }
 
   .photo-post__text {
+    position: relative;
     padding-left: 27px;
     padding-right: 28px;
     padding-top: 22px;
     padding-bottom: 24px;
-    text-align: left;
+    min-height: 109px;
 
     &--panorama {
+      position: static;
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
-
+      min-height: 74px;
     }
-  }
-
-
-
-  .photo-post__title {
-
-  }
-
-  .photo-post__author {
-
-  }
-
-  .photo-post__date {
-
   }
 
   .photo-post p {
     margin: 0;
-    margin-bottom: 20px;
-    padding: 0;
   }
 
   .photo-post__text--panorama p {
     order: 1;
-    margin-bottom: 0;
+  }
+
+  .photo-post__like-wrapper {
+    position: absolute;
+    left: 27px;
+    bottom: 19px;
+    z-index: 1;
+    width: 241px;;
+
+    &--panorama {
+      position: static;
+      width: 120px;
+    }
+  }
+
+  .photo-post__heart {
+    order: 1;
   }
 
   .photo-post__like {
-    display: block;
-    margin-bottom: 5px;
-    padding-left: 32px;
-    font-size: 12px;
-    color: $color--pink;
-    text-transform: uppercase;
-
     &--panorama {
       margin-bottom: 0;
     }
   }
-
-
-
 }

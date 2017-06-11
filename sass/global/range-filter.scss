@@ -1,0 +1,23 @@
+.range-filter {
+  position: relative;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+
+.range-filter__scale {
+  height: 2px;
+  background-color: $color--blue;
+}
+
+.range-filter__toggler {
+  position: absolute;
+  top: 28px;
+  right: 55px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid $color--pink;
+  border-radius: 50%;
+  background-color: $color--gray;
+}
