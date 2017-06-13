@@ -27,3 +27,8 @@
     width: 620px;
   }
 }
+
+@mixin container-form() {
+  margin: 0 auto;
+  width: 616px;
+}

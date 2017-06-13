@@ -79,14 +79,14 @@
   &--number {
     display: none;
   }
-}
 
-.contest-form__item--app .contest-form__item-title {
-  margin-bottom: 40px;
-}
+  &--app {
+    margin-bottom: 40px;
+  }
 
-.contest-form__item--review .contest-form__item-title {
-  margin-bottom: 15px;
+  &--review {
+    margin-bottom: 15px;
+  }
 }
 
 .contest-form__item input,
@@ -106,7 +106,7 @@
 }
 
 .contest-form__item textarea {
-  height: 200px;
+  min-height: 200px;
 }
 
 .contest-form__item input[type="checkbox"],
@@ -168,12 +168,10 @@
 
 .contest-form__ready {
   bottom: 420px;
-  left: 0;
 }
 
 .contest-form__error {
-  bottom: 975px;
-  left: 0;
+  bottom: 977px;
   padding-bottom: 50px;
 }
 
@@ -182,6 +180,7 @@
   .contest-form {
     display: flex;
     flex-direction: column;
+    padding-bottom: 52px;
   }
 
   .contest-form__header {
@@ -201,6 +200,7 @@
   }
 
   .contest-form__item {
+    padding-top: 0;
     border: 2px solid $color--gray-border;
     border-radius: 2px;
 
@@ -219,30 +219,31 @@
 
     &--achievements {
       order: 3;
-      margin: 0 auto;
-      width: 616px;
-      padding-top: 37;
-      padding-bottom: 45px;
+      @include container-form();
+      margin-bottom: 64px;
+      padding-bottom: 50px;
     }
 
     &--number {
       order: 2;
-      padding-top: 32px;
-      padding-bottom: 25px;
+      @include container-form();
+      margin-bottom: 66px;
+      text-align: center;
     }
 
     &--app {
       order: 1;
-      margin: 0 auto;
-      padding-top: 0;
-      padding-bottom: 48px;
-      width: 616px;
+      @include container-form();
+      margin-bottom: 66px;
+      padding-bottom: 57px;
     }
 
     &--review {
+      @include container-form();
       order: 4;
-      margin-top: 38px;
-      margin-bottom: 34px;
+      margin-top: 0;
+      margin-bottom: 67px;
+      padding-bottom: 33px;
     }
   }
 
@@ -255,21 +256,42 @@
   }
 
   .contest-form__item-title {
+    position: relative;
+    top: -16px;
+    z-index: 10;
     margin-bottom: 45px;
+    padding: 0 32px;
     width: auto;
     line-height: 30px;
+    background-color: #fff;
 
     &--app {
-      position: relative;
-      top: -16px;
-      z-index: 10;
+      margin-bottom: 26px;
       padding: 0 24px;
-      background-color: #fff;
+      width: 370px;
     }
 
     &--number {
       display: block;
+      margin-bottom: 15px;
+      width: 262px;
     }
+
+    &--achievements {
+      margin-bottom: 27px;
+      width: 438px;
+    }
+
+    &--review {
+      margin-bottom: 15px;
+      padding: 0 38px;
+      width: 260px;
+    }
+  }
+
+  .contest-form__item-content {
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   .contest-form__item-part {
@@ -280,15 +302,15 @@
 
     &--number {
       flex-direction: column;
+      margin-bottom: 30px;
     }
   }
 
-  .contest-form__field-text-label {
-    flex-shrink: 0;
-    margin-right: 22px;
-    min-width: 33px;
-    margin-bottom: 0;
-    padding-left: 0;
+  .contest-form__item-part--number {
+    position: relative;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .contest-form__item input {
@@ -297,12 +319,83 @@
     min-width: 320px;
   }
 
+  .contest-form__item textarea {
+    min-height: 194px;
+  }
 
+  .contest-form__item-part--number::after,
+  .contest-form__item-part--number::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 62px;
+    height: 62px;
+    background-color: $color--gray-border;
+  }
 
+  .contest-form__field-text-label {
+    flex-shrink: 0;
+    margin-right: 22px;
+    min-width: 33px;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    &--number {
+      align-self: flex-start;
+      order: 1;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+  }
+
+  .contest-form__checkbox-label {
+    margin-bottom: 53px;
+    padding-left: 57px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .contest-form__radio-label {
+    margin-bottom: 46px;
+    padding-left: 57px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   .contest-form__action {
     order: 5;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contest-form__send {
+    display: inline-block;
+    margin-bottom: 0;
+    width: 300px;
+    vertical-align: top;
+  }
+
+  .contest-form__note {
+    align-self: center;
+    margin-bottom: 0;
+    width: 185px;
+  }
+
+  .contest-form__ready {
+    bottom: 420px;
+    left: 0;
+  }
+
+  .contest-form__error {
+    bottom: 975px;
+    left: 0;
+    padding-bottom: 50px;
   }
 
 }
