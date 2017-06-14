@@ -5,11 +5,13 @@
   color: #fff;
   background: $color--blue url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 264px;
 
+  /*Фон при закрытом меню сдвигается*/
   &--menu-close {
     background-position: 50% 0px;
   }
 }
 
+/*Блок для перестроения сетки с мобильной/планшетной версии на десктопную*/
 .page-header__menu {
   display: flex;
   flex-direction: column;
@@ -37,6 +39,7 @@
   }
 }
 
+/*Блок с логотипом и "гамбургером"*/
 .page-header__menu-top {
   margin: 0;
   padding-top: 22px;
@@ -44,15 +47,17 @@
   min-height: 18px;
   width: 100%;
   background-color: $color--blue;
-
-  &--close {
-    min-height: 25px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.3);
-  }
 }
 
+/*При закрытом меню этот блок становится прозрачным*/
+.page-header--menu-close .page-header__menu-top {
+  min-height: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*Обертка для лого и гамбургера*/
 .page-header__menu-top-inner {
   display: flex;
   align-items: center;
@@ -66,6 +71,29 @@
   height: 22px;
 }
 
+/*Меню открыто, крестик*/
+.page__header-toggler {
+  display: block;
+  width: 50px;
+  height: 25px;
+  font-size: 0;
+  background-image: url("../img/icon-menu-cross.svg");
+  background-repeat: no-repeat;
+  background-position: 25px 0;
+}
+
+/*Меню закрыто, гамбургер*/
+.page-header--menu-close .page__header-toggler {
+  background-image: url("../img/icon-menu-burger.svg");
+  background-position: 0 0;
+}
+
+/*Меню закрыто, прячем навигацию*/
+.page-header--menu-close .page-header__main-nav {
+  display: none;
+}
+
+/*Блок для заголовка или слогана*/
 .page-header__intro {
   margin: 0;
   min-height: 395px;
@@ -82,11 +110,25 @@
   }
 }
 
-.page-header__intro-bg {
+/*Блок для фона с рукой и его центровки*/
+.page-header__intro-inner {
+  position: relative;
+  @include container();
   min-height: 395px;
-  background: url("../img/iphone-hand-mobile@1x.png") no-repeat 0 110px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 258px;
+    height: 286px;
+    background: url("../img/iphone-hand-mobile@1x.png") no-repeat 50% 50%;
+  }
 }
 
+/*Слоган скрыт в мобильной версии*/
 .page-header__slogan {
   display: none;
   margin: 0;
@@ -101,63 +143,26 @@
 @media (min-width: $tablet) {
   /*Изображения добавлены временно для удобства стилизации, позже будет добавлена графика для планшета и десктопа*/
   .page-header {
-    background-image: url("../img/iphone-hand-mobile@1x.png"),
-                      url("../img/bg-back-mobile@1x.jpg");
-    background-repeat: no-repeat,
-                       no-repeat;
-    background-position: 42% 699px,
-                         50% 270px;
-    background-size: auto,
-                     cover;
+    background: $color--blue url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 270px;
+    background-size: cover;
 
     &--menu-close {
-      background-position: 42% 442px, 50% 0px;
+      background-position: 50% 0px;
     }
-
-    &--photo-page {
-      background: url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 270px;
-      background-size: cover;
-    }
-
-    &--form-page {
-      background: url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 270px;
-      background-size: cover;
-    }
-  }
-
-  .page-header--menu-close.page-header--photo-page {
-    background-position: 50% 0px;
-  }
-
-  .page-header--menu-close.page-header--form-page {
-    background-position: 50% 0px;
   }
 
   .page-header__menu-top {
     padding-top: 44px;
     padding-bottom: 41px;
     min-height: 25px;
-
-    &--close {
-      padding-top: 44px;
-      padding-bottom: 42px;
-    }
   }
 
-  .page-header__menu-top-inner {
-    display: flex;
-    align-items: center;
+  .page-header--menu-close .page-header__menu-top {
+    padding-top: 44px;
+    padding-bottom: 42px;
   }
 
-  .page-header__logo {
-    display: block;
-    margin: 0;
-    margin-right: auto;
-    width: 75px;
-    height: 22px;
-  }
-
-  .page-header__intro-wrapper {
+  .page-header__intro-block {
     @include container();
   }
 
@@ -184,9 +189,16 @@
     }
   }
 
-  .page-header__intro-bg {
+  .page-header__intro-inner {
     min-height: 130px;
-    background: none;
+
+    &::before {
+      bottom: -382px;
+      left: 112px;
+      width: 258px;
+      height: 286px;
+      background: url("../img/iphone-hand-mobile@1x.png") no-repeat 50% 50%;
+    }
   }
 
   .page-header__slogan {

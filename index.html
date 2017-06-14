@@ -7,18 +7,18 @@
       <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-      <header class="page-header page-header--main-page"><!--page-header--menu-close - сдвигает фон при закрытом меню-->
+      <header class="page-header"><!-- класс page-header--menu-close закрывает меню -->
         <div class="page-header__menu">
-          <div class="page-header__menu-top"><!--page-header__menu-top--close - меню закрыто, элемент стал прозрачным -->
+          <div class="page-header__menu-top">
             <div class="page-header__menu-top-inner container">
               <h1 class="page-header__title page-header__title--main-page">Pink — фотоприложение для вас!</h1><!--скрыт!-->
               <a class="page-header__logo">
                 <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Пинк">
               </a>
-              <span class="nav-toggler">Меню</span><!--nav-toggler--close - меню закрыто, гамбургер -->
+              <span class="page__header-toggler">Меню</span>
             </div>
           </div>
-          <nav class="main-nav"><!--main-nav--close - меню закрыто-->
+          <nav class="page-header__main-nav main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item--current"><a>Главная</a></li>
               <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
@@ -27,9 +27,9 @@
             </ul>
           </nav>
         </div>
-        <div class="page-header__intro-wrapper">
-        <div class="page-header__intro page-header__intro--main-page">
-          <div class="page-header__intro-bg container">
+        <div class="page-header__intro-block">
+        <div class="page-header__intro">
+          <div class="page-header__intro-inner">
             <b class="page-header__slogan">Взгляните на жизнь иначе!</b>
           </div>
         </div>
