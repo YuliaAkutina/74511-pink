@@ -28,6 +28,7 @@
 }
 
 .contest-form__item {
+  margin: 0;
   padding: 0;
   border: none;
 
@@ -46,6 +47,7 @@
   }
 
   &--number {
+    @include container();
     padding-top: 32px;
     padding-bottom: 25px;
   }
@@ -56,6 +58,7 @@
   }
 
   &--review {
+    @include container ();
     margin-top: 38px;
     margin-bottom: 34px;
   }
@@ -170,6 +173,10 @@
   bottom: 420px;
 }
 
+.contest-form__popup-inner {
+  @include container();
+}
+
 .contest-form__error {
   bottom: 977px;
   padding-bottom: 50px;
@@ -228,6 +235,8 @@
       order: 2;
       @include container-form();
       margin-bottom: 66px;
+      padding-left: 0;
+      padding-right: 0;
       text-align: center;
     }
 
@@ -243,6 +252,7 @@
       order: 4;
       margin-top: 0;
       margin-bottom: 67px;
+      padding: 0;
       padding-bottom: 33px;
     }
   }
@@ -388,14 +398,17 @@
   }
 
   .contest-form__ready {
-    bottom: 420px;
-    left: 0;
+    bottom: 1060px;
+  }
+
+  .contest-form__popup-inner {
+    width: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .contest-form__error {
-    bottom: 975px;
-    left: 0;
-    padding-bottom: 50px;
+    bottom: 1620px;
   }
 
 }

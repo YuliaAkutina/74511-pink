@@ -38,6 +38,22 @@
 
 @media (min-width: $tablet) {
 
+  .popup {
+    width: 460px;
+    padding-top: 35px;
+    font-size: 18px;
+  }
 
+  .popup h3 {
+    margin: 0 auto;
+    margin-bottom: 25px;
+    width: 218px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .popup p {
+    margin-bottom: 30px;
+  }
 
 }

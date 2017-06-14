@@ -29,6 +29,10 @@
   }
 }
 
+.advantages__items-container {
+  @include container();
+}
+
 .advantages__items {
   position: relative;
   padding-top: 81px;
@@ -114,15 +118,28 @@
     }
 
     &::after {
+      display: none;
+    }
+  }
+
+  .advantages__items-container {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
       bottom: 0;
       left: 20px;
+      z-index: 10;
+      width: 256px;
+      height: 278px;
       /*Заменить картинку, как будет графика для планшетной версии*/
       background: url("../img/iphone-screen-mobile@1x.png") no-repeat 0 0;
       background-size: 157px auto;
     }
   }
 
-  .advantages__items-inner {
+  .advantages__items-wrapper {
     padding-left: 310px;
   }
 

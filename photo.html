@@ -3,7 +3,7 @@
     <head>
       <meta charset="utf-8">
       <title>Фотографии</title>
-      <meta name="wiewport" content="width=device-witht, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
@@ -37,9 +37,9 @@
             <p class="photo__intro">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
           </header>
           <article class="photo-post photo-post--panorama">
-            <a class="foto-post__link-panorama" href="#"><img class="photo-post__img photo-post__img--panorama" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Панорама дня"></a>
-            <div class="foto-post__text-panorama-wrapper container">
-              <div class="photo-post__text photo-post__text--panorama">
+            <a class="photo-post__image-link photo-post__image-link--panorama" href="#"><img class="photo-post__img photo-post__img--panorama" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Панорама дня"></a>
+            <div class="container">
+              <div class="photo-post__info photo-post__info--panorama">
                 <h3 class="photo-post__title">
                   <b class="photo-post__author">Анна</b>
                   <time class="photo-post__date" datetime="2017-06-10 14:55">(5 минут назад)</time>
@@ -54,13 +54,15 @@
           </article>
           <div class="photo__other-photos-wrapper container">
             <article class="photo-post">
-              <a href="#"><img class="photo-post__img" src="img/photo-1-mobile@1x.jpg" width="280" height="180" alt="Машина"></a>
-              <div class="photo-post__text">
-                <h3 class="photo-post__title">
-                  <b class="photo-post__author">Левон</b>
-                  <time class="photo-post__date" datetime="2017-06-10 10:00">(5 часов назад)</time>
-                </h3>
-                <p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <a class="photo-post__image-link" href="#"><img class="photo-post__img" src="img/photo-1-mobile@1x.jpg" width="280" height="180" alt="Машина"></a>
+              <div class="photo-post__info">
+                <div class="photo-post__text">
+                  <h3 class="photo-post__title">
+                    <b class="photo-post__author">Левон</b>
+                    <time class="photo-post__date" datetime="2017-06-10 10:00">(5 часов назад)</time>
+                  </h3>
+                  <p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                </div>
                 <div class="photo-post__like-wrapper">
                   <button class="photo-post__heart" type="button"></button>
                   <span class="photo-post__like">Нравится: 356</span>
@@ -68,13 +70,15 @@
               </div>
             </article>
             <article class="photo-post">
-              <a href="#"><img class="photo-post__img" src="img/photo-2-mobile@1x.jpg" width="280" height="180" alt="Барабанная установка"></a>
-              <div class="photo-post__text">
-                <h3 class="photo-post__title">
-                  <b class="photo-post__author">Антон</b>
-                  <time class="photo-post__date" datetime="2017-06-10 03:00">(12 часов назад)</time>
-                </h3>
-                <p>Соседи будут рады!</p>
+              <a class="photo-post__image-link" href="#"><img class="photo-post__img" src="img/photo-2-mobile@1x.jpg" width="280" height="180" alt="Барабанная установка"></a>
+              <div class="photo-post__info">
+                <div class="photo-post__text">
+                  <h3 class="photo-post__title">
+                    <b class="photo-post__author">Антон</b>
+                    <time class="photo-post__date" datetime="2017-06-10 03:00">(12 часов назад)</time>
+                  </h3>
+                  <p>Соседи будут рады!</p>
+                </div>
                 <div class="photo-post__like-wrapper">
                   <button class="photo-post__heart" type="button"></button>
                   <span class="photo-post__like">Нравится: 666</span>
@@ -82,13 +86,15 @@
               </div>
             </article>
             <article class="photo-post">
-              <a href="#"><img class="photo-post__img" src="img/photo-3-mobile@1x.jpg" width="280" height="180" alt="Небо сквозь стеклянную крышу"></a>
-              <div class="photo-post__text">
-                <h3 class="photo-post__title">
-                  <b class="photo-post__author">Борис</b>
-                  <time class="photo-post__date" datetime="2017-06-09 20:00">(20 часов назад)</time>
-                </h3>
-                <p>Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <a class="photo-post__image-link" href="#"><img class="photo-post__img" src="img/photo-3-mobile@1x.jpg" width="280" height="180" alt="Небо сквозь стеклянную крышу"></a>
+              <div class="photo-post__info">
+                <div class="photo-post__text">
+                  <h3 class="photo-post__title">
+                    <b class="photo-post__author">Борис</b>
+                    <time class="photo-post__date" datetime="2017-06-09 20:00">(20 часов назад)</time>
+                  </h3>
+                  <p>Здесь могла быть ваша цитата о высоком и вечном.</p>
+                </div>
                 <div class="photo-post__like-wrapper">
                   <button class="photo-post__heart" type="button"></button>
                   <span class="photo-post__like">Нравится: 215</span>
@@ -96,13 +102,15 @@
               </div>
             </article>
             <article class="photo-post">
-              <a href="#"><img class="photo-post__img" src="img/photo-4-mobile@1x.jpg" width="280" height="180" alt="Кубанская бахча"></a>
-              <div class="photo-post__text">
-                <h3 class="photo-post__title">
-                  <b class="photo-post__author">Сергей</b>
-                  <time class="photo-post__date" datetime="2017-06-09 15:00">(25 часов назад)</time>
-                </h3>
-                <p>Самая кубанская в мире!</p>
+              <a class="photo-post__image-link" href="#"><img class="photo-post__img" src="img/photo-4-mobile@1x.jpg" width="280" height="180" alt="Кубанская бахча"></a>
+              <div class="photo-post__info">
+                <div class="photo-post__text">
+                  <h3 class="photo-post__title">
+                    <b class="photo-post__author">Сергей</b>
+                    <time class="photo-post__date" datetime="2017-06-09 15:00">(25 часов назад)</time>
+                  </h3>
+                  <p>Самая кубанская в мире!</p>
+                </div>
                 <div class="photo-post__like-wrapper">
                   <button class="photo-post__heart" type="button"></button>
                   <span class="photo-post__like">Нравится: 4</span>
@@ -110,13 +118,15 @@
               </div>
             </article>
             <article class="photo-post">
-              <a href="#"><img class="photo-post__img" src="img/photo-5-mobile@1x.jpg" width="280" height="180" alt="Вид с вершины холма"></a>
-              <div class="photo-post__text">
-                <h3 class="photo-post__title">
-                  <b class="photo-post__author">Максим</b>
-                  <time class="photo-post__date" datetime="2017-06-07 23:00">(40 часов назад)</time>
-                </h3>
-                <p>Где снег-то?</p>
+              <a class="photo-post__image-link" href="#"><img class="photo-post__img" src="img/photo-5-mobile@1x.jpg" width="280" height="180" alt="Вид с вершины холма"></a>
+              <div class="photo-post__info">
+                <div class="photo-post__text">
+                  <h3 class="photo-post__title">
+                    <b class="photo-post__author">Максим</b>
+                    <time class="photo-post__date" datetime="2017-06-07 23:00">(40 часов назад)</time>
+                  </h3>
+                  <p>Где снег-то?</p>
+                </div>
                 <div class="photo-post__like-wrapper">
                   <button class="photo-post__heart" type="button"></button>
                   <span class="photo-post__like">Нравится: 150</span>
@@ -124,13 +134,15 @@
               </div>
             </article>
             <article class="photo-post">
-              <a href="#"><img class="photo-post__img" src="img/photo-6-mobile@1x.jpg" width="280" height="180" alt="Самолет в небе"></a>
-              <div class="photo-post__text">
-                <h3 class="photo-post__title">
-                  <b class="photo-post__author">Надежда</b>
-                  <time class="photo-post__date" datetime="2017-06-07 18:00">(45 часов назад)</time>
-                </h3>
-                <p>Всем GM и взаимные лайки!</p>
+              <a class="photo-post__image-link" href="#"><img class="photo-post__img" src="img/photo-6-mobile@1x.jpg" width="280" height="180" alt="Самолет в небе"></a>
+              <div class="photo-post__info">
+                <div class="photo-post__text">
+                  <h3 class="photo-post__title">
+                    <b class="photo-post__author">Надежда</b>
+                    <time class="photo-post__date" datetime="2017-06-07 18:00">(45 часов назад)</time>
+                  </h3>
+                  <p>Всем GM и взаимные лайки!</p>
+                </div>
                 <div class="photo-post__like-wrapper">
                   <button class="photo-post__heart" type="button"></button>
                   <span class="photo-post__like">Нравится: 2560</span>
