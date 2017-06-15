@@ -202,7 +202,7 @@
 
   .advantages__header {
     padding-top: 67px;
-    padding-bottom: 50px;
+    padding-bottom: 75px;
   }
 
   .advantage__intro {
@@ -210,6 +210,18 @@
 
     &:last-of-type {
       width: 420px;
+    }
+  }
+
+  .advantages__items {
+    padding-top: 0;
+    padding-bottom: 58px;
+
+    &::before {
+      top: 0;
+      left: 0;
+      height: 96px;
+      background: url("../img/bg-triangle-white.svg") no-repeat 50% 50%;
     }
   }
 
@@ -229,7 +241,7 @@
 
   .advantages__item {
     margin-right: 20px;
-    padding-top: 355px;
+    padding-top: 359px;
     width: 300px;
     text-align: center;
 
@@ -240,7 +252,7 @@
 
   .advantages__item-title {
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 26px;
     width: 225px;
     font-size: 30px;
     line-height: 30px;
@@ -252,6 +264,34 @@
   }
 
   .advantages__item-descr br {
+    display: none;
+  }
+
+  .advantages__article {
+    background-color: $color--gray;
+  }
+
+  .asvantages__article-inner {
+    padding-top: 94px;
+    padding-bottom: 113px;
+    padding-left: 366px;
+  }
+
+  .advantages__article-title {
+    margin-bottom: 26px;
+    line-height: 30px;
+  }
+
+  .advantages__article-title br {
+    display: none;
+  }
+
+  .advantages__article-descr {
+    margin-bottom: 31px;
+    width: 530px;
+  }
+
+  .advantages__article-descr br {
     display: none;
   }
 

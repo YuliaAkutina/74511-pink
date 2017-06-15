@@ -4,7 +4,7 @@
   font-size: 24px;
   line-height: 1.2;
   font-weight: $light;
-  color: #color--blue;
+  color: $color--blue;
   background-color: #fff;
 }
 
@@ -141,6 +141,65 @@
      display: block;
      width: 100%;
      height: 70px;
+     background: url("../img/bg-triangle-white-footer.svg") no-repeat center 0;
+     background-size: cover;
+   }
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .contacts {
+    padding-top: 64px;
+  }
+
+  .contacts__header {
+    margin-bottom: 58px;
+  }
+
+  .contacts__intro {
+    font-size: 50px;
+  }
+
+  .contacts__items {
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+  }
+
+  .contacts__item {
+    margin-bottom: 11px;
+
+    &--tel {
+      margin-right: 106px;
+      margin-bottom: 0;
+    }
+
+    &--email {
+      order: 2;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+
+    &--address {
+      order: 1;
+      margin-left: 0;
+      margin-right: 93px;
+      width: 215px;
+    }
+  }
+
+  .contacts__item-title {
+    margin-bottom: 25px;
+  }
+
+  .contacts__map{
+    height: 500px;
+    background: $color--gray url("../img/bg-map-mobile@1x.png") no-repeat 50% 100%;
+    background-size: cover;
+
+   &::before {
+     height: 132px;
      background: url("../img/bg-triangle-white-footer.svg") no-repeat center 0;
      background-size: cover;
    }

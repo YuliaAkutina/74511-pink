@@ -17,3 +17,11 @@
   border-radius: 50%;
   cursor: pointer;
 }
+
+@media (min-width: $desktop) {
+
+  .slider__controls {
+    display: none;
+  }
+
+}

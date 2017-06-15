@@ -154,6 +154,7 @@
    margin: 0 auto;
    padding-left: 20px;
    padding-right: 20px;
+   width: 660px;
    box-sizing: border-box;
   }
 
@@ -179,8 +180,9 @@
     }
   }
 
-  .price__cell-empty {
+ .price__table .price__cell-empty {
     visibility: hidden;
+    border-top: none;
   }
 
   .price__table th {
@@ -229,4 +231,45 @@
       background-position: 50% 50%;
     }
   }
+}
+
+@media (min-width: $desktop) {
+
+  .price {
+    padding-top: 154px;
+    padding-bottom: 95px;
+    font-size: 18px;
+
+    &::before {
+      height: 98px;
+    }
+  }
+
+  .price__table-wrapper {
+   margin: 0 auto;
+   padding-left: 10px;
+   padding-right: 10px;
+   width: 960px;
+  }
+
+  .price__table th {
+    padding-top: 17px;
+    padding-bottom: 22px;
+  }
+
+  .price__title {
+    font-size: 18px;
+  }
+
+  .price__value {
+    font-size: 24px;
+  }
+
+  .price__services {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
 }

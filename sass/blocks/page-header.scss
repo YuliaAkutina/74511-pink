@@ -151,6 +151,10 @@
     }
   }
 
+  .page-header__menu {
+    width: 100%;
+  }
+
   .page-header__menu-top {
     padding-top: 44px;
     padding-bottom: 41px;
@@ -228,10 +232,14 @@
     background-color: rgba(0, 0, 0, 0.3);
   }
 
+  /* Миксин в этом случае не использован из-за IE*/
   .page-header__menu {
     flex-direction: row;
     justify-content: space-between;
-    @include container();
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 940px;
     min-height: 110px;
   }
 
@@ -324,6 +332,5 @@
       width: 475px;
     }
   }
-
 
 }
