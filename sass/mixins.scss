@@ -26,6 +26,12 @@
   @media (min-width: $tablet) {
     width: 620px;
   }
+
+  @media (min-width: $desktop) {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 940px;
+  }
 }
 
 @mixin container-form() {

@@ -8,23 +8,25 @@
     </head>
     <body>
       <header class="page-header"><!-- класс page-header--menu-close закрывает меню -->
-        <div class="page-header__menu">
-          <div class="page-header__menu-top">
-            <div class="page-header__menu-top-inner container">
-              <a class="page-header__logo" href="index.html">
-                <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Пинк">
-              </a>
-              <span class="page__header-toggler">Меню</span>
+        <div class="page-header__menu-wrapper">
+          <div class="page-header__menu">
+            <div class="page-header__menu-top">
+              <div class="page-header__menu-top-inner container">
+                <a class="page-header__logo" href="index.html">
+                  <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Пинк">
+                </a>
+                <span class="page__header-toggler">Меню</span>
+              </div>
             </div>
+            <nav class="page-header__main-nav main-nav">
+              <ul class="main-nav__list">
+                <li class="main-nav__item"><a href="index.html">Главная</a></li>
+                <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+                <li class="main-nav__item"><a class="main-nav__current">Конкурс</a></li>
+                <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+              </ul>
+            </nav>
           </div>
-          <nav class="page-header__main-nav main-nav">
-            <ul class="main-nav__list">
-              <li class="main-nav__item"><a href="index.html">Главная</a></li>
-              <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
-              <li class="main-nav__item main-nav__item--current"><a>Конкурс</a></li>
-              <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-            </ul>
-          </nav>
         </div>
         <div class="page-header__intro page-header__intro--form-page">
           <h1 class="page-header__title page-header__title--form-page">Конкурс на самое безбашенное путешествие с Пинк</h1>

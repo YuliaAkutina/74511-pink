@@ -192,3 +192,67 @@
   }
 
 }
+
+@media (min-width: $desktop) {
+
+  .advantages {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .advantages__header {
+    padding-top: 67px;
+    padding-bottom: 50px;
+  }
+
+  .advantage__intro {
+    font-size: 50px;
+
+    &:last-of-type {
+      width: 420px;
+    }
+  }
+
+  .advantages__items-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+  }
+
+  .advantages__items-container {
+    position: static;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .advantages__item {
+    margin-right: 20px;
+    padding-top: 355px;
+    width: 300px;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .advantages__item-title {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 225px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .advantages__item-descr {
+    margin: 0 auto;
+    width: 245px;
+  }
+
+  .advantages__item-descr br {
+    display: none;
+  }
+
+}
