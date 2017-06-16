@@ -283,10 +283,9 @@
 
     &--photo-page {
       padding-left: 100px;
-      padding-right: 100px;
-      padding-top: 67px;
-      padding-bottom: 67px;
-      min-height: 196px;
+      padding-top: 60px;
+      padding-bottom: 82px;
+      min-height: 108px;
     }
 
     &--form-page {
@@ -326,7 +325,6 @@
 
   .page-header__title {
     width: 360px;
-    font-size: 50px;
 
     &--form-page {
       width: 475px;
