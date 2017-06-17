@@ -147,15 +147,15 @@
   }
 
   .price__label {
-     display: none;
+    display: none;
   }
 
   .price__table-wrapper {
-   margin: 0 auto;
-   padding-left: 20px;
-   padding-right: 20px;
-   width: 660px;
-   box-sizing: border-box;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 660px;
+    box-sizing: border-box;
   }
 
   .price__table {
@@ -180,7 +180,7 @@
     }
   }
 
- .price__table .price__cell-empty {
+  .price__table .price__cell-empty {
     visibility: hidden;
     border-top: none;
   }
@@ -246,10 +246,10 @@
   }
 
   .price__table-wrapper {
-   margin: 0 auto;
-   padding-left: 10px;
-   padding-right: 10px;
-   width: 960px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 960px;
   }
 
   .price__table th {

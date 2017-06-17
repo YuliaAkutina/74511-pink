@@ -71,16 +71,16 @@
   background-size: cover;
   overflow: hidden;
 
- &::before {
-   content: "";
-   position: absolute;
-   top: -26px;
-   left: 0;
-   display: block;
-   width: 100%;
-   height: 65px;
-   background: url("../img/bg-triangle-white-footer.svg") no-repeat center -60%;
- }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -26px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 65px;
+    background: url("../img/bg-triangle-white-footer.svg") no-repeat center -60%;
+  }
 }
 
 @media (min-width: $tablet) {
@@ -143,17 +143,17 @@
     background: $color--gray url("../img/bg-map-mobile@1x.png") no-repeat 50% 100%;
     background-size: cover;
 
-   &::before {
-     content: "";
-     position: absolute;
-     top: 0;
-     left: 0;
-     display: block;
-     width: 100%;
-     height: 70px;
-     background: url("../img/bg-triangle-white-footer.svg") no-repeat center 0;
-     background-size: cover;
-   }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 70px;
+      background: url("../img/bg-triangle-white-footer.svg") no-repeat center 0;
+      background-size: cover;
+    }
   }
 
 }
@@ -208,11 +208,11 @@
     background: $color--gray url("../img/bg-map-mobile@1x.png") no-repeat 50% 100%;
     background-size: cover;
 
-   &::before {
-     height: 132px;
-     background: url("../img/bg-triangle-white-footer.svg") no-repeat center 0;
-     background-size: cover;
-   }
+    &::before {
+      height: 132px;
+      background: url("../img/bg-triangle-white-footer.svg") no-repeat center 0;
+      background-size: cover;
+    }
   }
 
 }
