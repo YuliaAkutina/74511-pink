@@ -71,10 +71,12 @@
 .contest-form__item-title {
   display: block;
   margin: 0 auto;
+  padding: 0;
   margin-bottom: 45px;
   width: 220px;
   font-size: 14px;
   line-height: 18px;
+  font-weight: $normal;
   color: $color--pink;
   text-align: center;
   text-transform: uppercase;
@@ -112,6 +114,16 @@
   min-height: 200px;
 }
 
+.contest-form__item input:hover,
+.contest-form__item textarea:hover {
+  border-color: $color--blue;
+}
+
+.contest-form__item input:focus,
+.contest-form__item textarea:focus {
+  border-color: $color--pink;
+}
+
 .contest-form__item input[type="checkbox"],
 .contest-form__item input[type="radio"] {
   display: none;
@@ -130,21 +142,86 @@
   text-transform: uppercase;
 }
 
+
 .contest-form__checkbox-label {
+  position: relative;
   margin-bottom: 53px;
   padding-left: 68px;
 
-  &:last-child {
-    margin-bottom: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border: 2px solid $color--gray-border;
+    border-radius: 2px;
   }
 }
 
+.contest-form__checkbox-label:hover {
+  &::before {
+    border-color: $color--blue;
+  }
+}
+
+.contest-form__checkbox-label:active {
+  &::before {
+    border-color: $color--pink;
+  }
+}
+
+.contest-form__checkbox-group:last-of-type {
+  margin-bottom: -53px;
+}
+
 .contest-form__radio-label {
+  position: relative;
   margin-bottom: 45px;
   padding-left: 68px;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -4px;
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    border: 2px solid $color--gray-border;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 13px;
+    top: 8px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: $color--pink;
+    border-radius: 50%;
+  }
+}
+
+.contest-form__radio-label:hover {
+  &::before {
+    border-color: $color--blue;
+  }
+}
+
+.contest-form__radio-label:active {
+  &::before {
+    border-color: $color--pink;
   }
 }
 
@@ -157,6 +234,10 @@
   margin-bottom: 35px;
 }
 
+.contest-form__send--disabled {
+  background-color: $color--gray-border;
+}
+
 .contest-form__note {
   display: block;
   margin-bottom: 16px;
@@ -167,6 +248,10 @@
 
 .contest-form__ast {
   color: $color--pink;
+}
+
+.contest-form__note-part {
+  display: none;
 }
 
 .contest-form__ready {
@@ -185,9 +270,13 @@
 @media (min-width: $tablet) {
 
   .contest-form {
+    padding-bottom: 52px;
+  }
+
+  .contest-form__items {
     display: flex;
     flex-direction: column;
-    padding-bottom: 52px;
+    @include container();
   }
 
   .contest-form__header {
@@ -208,6 +297,7 @@
 
   .contest-form__item {
     padding-top: 0;
+    width: 616px;
     border: 2px solid $color--gray-border;
     border-radius: 2px;
 
@@ -220,20 +310,21 @@
     }
 
     &--personal {
-    @include container();
+      margin: 0;
+      padding: 0;
+      width: 620px;
       padding-bottom: 14px;
     }
 
     &--achievements {
       order: 3;
-      @include container-form();
-      margin-bottom: 64px;
+      margin-bottom: 66px;
       padding-bottom: 50px;
     }
 
     &--number {
       order: 2;
-      @include container-form();
+      margin: 0;
       margin-bottom: 66px;
       padding-left: 0;
       padding-right: 0;
@@ -242,18 +333,17 @@
 
     &--app {
       order: 1;
-      @include container-form();
       margin-bottom: 66px;
       padding-bottom: 57px;
     }
 
     &--review {
-      @include container-form();
       order: 4;
+      margin: 0;
       margin-top: 0;
       margin-bottom: 67px;
       padding: 0;
-      padding-bottom: 33px;
+      padding-bottom: 34px;
     }
   }
 
@@ -270,14 +360,13 @@
     top: -16px;
     z-index: 10;
     margin-bottom: 45px;
-    padding: 0 32px;
+    padding: 0;
     width: auto;
     line-height: 30px;
     background-color: #fff;
 
     &--app {
       margin-bottom: 26px;
-      padding: 0 24px;
       width: 370px;
     }
 
@@ -294,14 +383,13 @@
 
     &--review {
       margin-bottom: 15px;
-      padding: 0 38px;
       width: 260px;
     }
   }
 
   .contest-form__item-content {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 58px;
+    padding-right: 58px;
   }
 
   .contest-form__item-part {
@@ -329,10 +417,15 @@
     min-width: 320px;
   }
 
+  .contest-form__item-part--number input {
+    border-right: 62px solid $color--gray-border;
+  }
+
   .contest-form__item textarea {
     min-height: 194px;
   }
 
+/* Тут будут жить иконки
   .contest-form__item-part--number::after,
   .contest-form__item-part--number::after {
     content: "";
@@ -340,10 +433,7 @@
     top: 0;
     right: 0;
     display: block;
-    width: 62px;
-    height: 62px;
-    background-color: $color--gray-border;
-  }
+  }*/
 
   .contest-form__field-text-label {
     flex-shrink: 0;
@@ -361,20 +451,30 @@
   }
 
   .contest-form__checkbox-label {
-    margin-bottom: 53px;
-    padding-left: 57px;
+    margin-bottom: 52px;
+    padding-left: 59px;
+  }
 
-    &:last-child {
-      margin-bottom: 0;
-    }
+  .contest-form__checkbox-group:last-of-type {
+    margin-bottom: -50px;
   }
 
   .contest-form__radio-label {
     margin-bottom: 46px;
-    padding-left: 57px;
+    padding-left: 59px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &::before {
+      left: -1px;
+      top: -4px;
+    }
+
+    &::after {
+      left: 12px;
+      top: 8px;
     }
   }
 
@@ -409,6 +509,167 @@
 
   .contest-form__error {
     bottom: 1620px;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .contest-form {
+    padding-bottom: 0px;
+  }
+
+  .contest-form__items {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .contest-form__header {
+    padding-top: 92px;
+    padding-bottom: 78px;
+  }
+
+  .contest-form__header p {
+    width: 758px;
+  }
+
+  .contest-form__header-part {
+    display: inline;
+  }
+
+  .contest-form__item {
+    padding-top: 0;
+    width: 936px;
+
+    &--personal {
+      padding-top: 6px;
+      padding-bottom: 0;
+      width: 432px;
+    }
+
+    &--achievements {
+      margin-bottom: 65px;
+      padding-bottom: 6px;
+    }
+
+    &--number {
+      margin-bottom: 64px;
+      padding-bottom: 13px;
+    }
+
+    &--app {
+      margin-bottom: 66px;
+      padding-bottom: 59px;
+      width: 432px;
+    }
+
+    &--review {
+      margin: 0;
+      margin-top: 0;
+      margin-bottom: 65px;
+      padding: 0;
+      padding-bottom: 27px;
+    }
+  }
+
+  .contest-form__item-title {
+    &--app {
+      margin-bottom: 30px;
+      width: 370px;
+    }
+
+    &--number {
+      margin-bottom: 13px;
+      width: 262px;
+    }
+
+    &--achievements {
+      margin-bottom: 28px;
+      width: 438px;
+    }
+
+    &--review {
+      margin-bottom: 13px;
+      width: 260px;
+    }
+  }
+
+  .contest-form__item-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 58px;
+    padding-right: 58px;
+  }
+
+  .contest-form__item-part {
+    &--number {
+      margin-bottom: 0;
+      width: 374px;
+    }
+  }
+
+  .contest-form__item textarea {
+    min-height: 127px;
+  }
+
+  .contest-form__checkbox-label {
+    margin-bottom: 53px;
+    padding-left: 59px;
+  }
+
+  .contest-form__checkbox-group:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .contest-form__radio-label {
+    margin-bottom: 44px;
+    padding-left: 77px;
+
+    &::before {
+      left: 17px;
+    }
+
+    &::after {
+      left: 30px;
+    }
+  }
+
+  .contest-form__note {
+    width: 318px;
+  }
+
+  .contest-form__note-part {
+    display: inline;
+  }
+
+  .contest-form__ready {
+    bottom: 210px;
+    width: 780px;
+  }
+
+  .contest-form__ready h3 {
+    width: 400px;
+  }
+
+  .contest-form__ready p {
+    margin-bottom: 40px;
+  }
+
+  .contest-form__popup-inner {
+    width: 440px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .contest-form__error {
+    bottom: 676px;
+  }
+
+  .contest-form__error .contest-form__popup-inner {
+    width: 300px;
   }
 
 }

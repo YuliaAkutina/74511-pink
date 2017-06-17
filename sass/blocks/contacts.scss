@@ -52,6 +52,16 @@
 .contacts__item a {
   color: $color--pink;
   text-decoration: none;
+
+  &:hover {
+    color: $color--blue;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $color--blue-opacity;
+    text-decoration: none;
+  }
 }
 
 .contacts__map{

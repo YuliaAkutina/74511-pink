@@ -5,6 +5,7 @@
   line-height: 18px;
   font-weight: $bold;
   text-align: center;
+  outline: none;
   cursor: pointer;
 
   &--circle {
@@ -24,4 +25,20 @@
     border-radius: 2px;
     background-color: $color--green;
   }
+
+  &:active {
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn--form:hover {
+  background-color: $color--dark-green;
+}
+
+.btn--form:active {
+  color: rgba(255, 255, 255, 0.3);
 }

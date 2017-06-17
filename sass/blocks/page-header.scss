@@ -166,6 +166,10 @@
     padding-bottom: 42px;
   }
 
+  .page-header__menu-top-inner {
+
+  }
+
   .page-header__intro-block {
     @include container();
   }
@@ -194,6 +198,7 @@
   }
 
   .page-header__intro-inner {
+    width: auto;
     min-height: 130px;
 
     &::before {
@@ -232,7 +237,6 @@
     background-color: rgba(0, 0, 0, 0.3);
   }
 
-  /* Миксин в этом случае не использован из-за IE*/
   .page-header__menu {
     flex-direction: row;
     justify-content: space-between;
@@ -289,11 +293,11 @@
     }
 
     &--form-page {
-      padding-top: 67px;
-      padding-bottom: 60px;
+      padding-top: 60px;
+      padding-bottom: 82px;
       padding-left: 45px;
       padding-right: 45px;
-      min-height: 95px;
+      min-height: 120px;
     }
   }
 
@@ -327,7 +331,7 @@
     width: 360px;
 
     &--form-page {
-      width: 475px;
+      width: 750px;
     }
   }
 

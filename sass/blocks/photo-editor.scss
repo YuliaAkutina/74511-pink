@@ -103,11 +103,32 @@
 .photo-editor__send {
   color: $color--pink;
   border-color: $color--pink;
+
+  &:hover {
+    color: #fff;
+    background-color: $color--pink;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: $color--pink;
+  }
 }
 
 .photo-editor__reset {
   color: $color--blue-light-opacity;
   border-color: $color--blue-light-opacity;
+
+  &:hover {
+    color: $color--blue-opacity;
+    border-color: $color--blue-opacity;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: $color--blue-opacity;
+    border-color: transparent;
+  }
 }
 
 @media (min-width: $tablet) {
@@ -247,7 +268,7 @@
   .photo-editor__form-inner {
     width: 800px;
     padding-left: 80px;
-    padding-right: 80px;
+    padding-right: 60px;
   }
 
   .photo-editor__photo-select {

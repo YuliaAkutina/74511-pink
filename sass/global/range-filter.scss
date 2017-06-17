@@ -20,4 +20,8 @@
   border: 2px solid $color--pink;
   border-radius: 50%;
   background-color: $color--gray;
+
+  &:hover {
+    background-color: $color--pink;
+  }
 }

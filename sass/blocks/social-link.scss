@@ -16,4 +16,12 @@
   &--ytb {
     background: url("../img/icon-youtube.svg") no-repeat 50% 50%;
   }
+
+  &:hover {
+    border-color: $color--blue;
+  }
+
+  &:active {
+    border-color: $color--blue-light-opacity;
+  }
 }
