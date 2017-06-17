@@ -3,6 +3,12 @@
   padding: 0;
   font-size: 18px;
   color: #fff;
+  background: $color--blue url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 264px;
+
+  /*Фон при закрытом меню сдвигается*/
+  &--menu-close {
+    background-position: 50% 0px;
+  }
 }
 
 .page-header__menu {
@@ -32,37 +38,66 @@
   }
 }
 
+/*Блок с логотипом и "гамбургером"*/
 .page-header__menu-top {
   margin: 0;
+  padding-top: 22px;
+  padding-bottom: 26px;
+  min-height: 18px;
   width: 100%;
-  min-height: 70px;
   background-color: $color--blue;
-
-  &--close {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
 }
 
+/*При закрытом меню этот блок становится прозрачным*/
+.page-header--menu-close .page-header__menu-top {
+  min-height: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*Обертка для лого и гамбургера*/
 .page-header__menu-top-inner {
   display: flex;
   align-items: center;
+  @include container();
 }
 
 .page-header__logo {
   display: block;
   margin: 0;
   margin-right: auto;
-  margin-top: 22px;
-  margin-bottom: 26px;
   width: 75px;
   height: 22px;
 }
 
+/*Меню открыто, крестик*/
+.page__header-toggler {
+  display: block;
+  width: 50px;
+  height: 25px;
+  font-size: 0;
+  background-image: url("../img/icon-menu-cross.svg");
+  background-repeat: no-repeat;
+  background-position: 25px 0;
+}
+
+/*Меню закрыто, гамбургер*/
+.page-header--menu-close .page__header-toggler {
+  background-image: url("../img/icon-menu-burger.svg");
+  background-position: 0 0;
+}
+
+/*Меню закрыто, прячем навигацию*/
+.page-header--menu-close .page-header__main-nav {
+  display: none;
+}
+
+/*Блок для заголовка или слогана*/
 .page-header__intro {
   margin: 0;
   min-height: 395px;
   text-align: center;
-  background: $color--blue url("../img/bg-back-mobile@1x.jpg") no-repeat 50% -70px;
 
   &--photo-page {
     padding: 30px 20px;
@@ -75,8 +110,229 @@
   }
 }
 
-.page-header__intro-bg {
+/*Блок для фона с рукой и его центровки*/
+.page-header__intro-inner {
+  position: relative;
+  @include container();
   min-height: 395px;
-  background: url("../img/iphone-hand-mobile@1x.png") no-repeat 0 110px;
-  background-size: auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 258px;
+    height: 286px;
+    background: url("../img/iphone-hand-mobile@1x.png") no-repeat 50% 50%;
+  }
+}
+
+/*Слоган скрыт в мобильной версии*/
+.page-header__slogan {
+  display: none;
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: $light;
+  text-align: center;
+  color: #fff;
+}
+
+@media (min-width: $tablet) {
+  /*Изображения добавлены временно для удобства стилизации, позже будет добавлена графика для планшета и десктопа*/
+  .page-header {
+    background: $color--blue url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 270px;
+    background-size: cover;
+
+    &--menu-close {
+      background-position: 50% 0px;
+    }
+  }
+
+  .page-header__menu {
+    width: 100%;
+  }
+
+  .page-header__menu-top {
+    padding-top: 44px;
+    padding-bottom: 41px;
+    min-height: 25px;
+  }
+
+  .page-header--menu-close .page-header__menu-top {
+    padding-top: 44px;
+    padding-bottom: 42px;
+  }
+
+  .page-header__menu-top-inner {
+
+  }
+
+  .page-header__intro-block {
+    @include container();
+  }
+
+  .page-header__intro {
+    padding-top: 91px;
+    padding-bottom: 20px;
+    padding-left: 34px;
+    min-height: 130px;
+
+    &--photo-page {
+      padding-left: 100px;
+      padding-right: 100px;
+      padding-top: 67px;
+      padding-bottom: 67px;
+      min-height: 196px;
+    }
+
+    &--form-page {
+      padding-top: 67px;
+      padding-bottom: 60px;
+      padding-left: 45px;
+      padding-right: 45px;
+      min-height: 95px;
+    }
+  }
+
+  .page-header__intro-inner {
+    width: auto;
+    min-height: 130px;
+
+    &::before {
+      bottom: -382px;
+      left: 112px;
+      width: 258px;
+      height: 286px;
+      background: url("../img/iphone-hand-mobile@1x.png") no-repeat 50% 50%;
+    }
+  }
+
+  .page-header__slogan {
+    display: block;
+    width: 190px;
+  }
+
+  .page-header__title {
+    width: 360px;
+    font-size: 50px;
+
+    &--form-page {
+      width: 475px;
+    }
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .page-header {
+    background: $color--blue url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 0;
+    background-size: cover;
+  }
+
+  .page-header__menu-wrapper {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .page-header__menu {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 940px;
+    min-height: 110px;
+  }
+
+  .page__header-toggler {
+    display: none;
+  }
+
+  .page-header--menu-close .page-header__main-nav {
+    display: block;
+  }
+
+  .page-header--menu-close .page-header__menu-top,
+  .page-header__menu-top {
+    padding-top: 26px;
+    padding-bottom: 39px;
+    width: 150px;
+    background-color: transparent;
+  }
+
+  .page-header__menu-top-inner {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .page-header__logo {
+    margin: 0;
+    width: 150px;
+    height: 45px;
+    /*Временная обертка*/
+    outline: 1px solid yellow;
+  }
+
+
+  .page-header__intro {
+    padding-top: 105px;
+    padding-bottom: 43px;
+    padding-left: 20px;
+    min-height: 180px;
+
+    &--photo-page {
+      padding-left: 100px;
+      padding-top: 60px;
+      padding-bottom: 82px;
+      min-height: 108px;
+    }
+
+    &--form-page {
+      padding-top: 60px;
+      padding-bottom: 82px;
+      padding-left: 45px;
+      padding-right: 45px;
+      min-height: 120px;
+    }
+  }
+
+  .page-header__intro-block {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 350px;
+      z-index: 1;
+      width: 258px;
+      height: 286px;
+      background: url("../img/iphone-hand-mobile@1x.png") no-repeat 50% 50%;
+    }
+  }
+
+  .page-header__intro-inner {
+    &::before {
+      display: none;
+    }
+  }
+
+  .page-header__slogan {
+    font-size: 50px;
+    width: 238px;
+  }
+
+  .page-header__title {
+    width: 360px;
+
+    &--form-page {
+      width: 750px;
+    }
+  }
+
 }

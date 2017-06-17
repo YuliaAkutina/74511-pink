@@ -15,17 +15,50 @@
   }
 }
 
-.photo-post img {
+.photo-post__img {
   display: block;
+  width: 280px;
+  height: auto;
+
+  &--panorama {
+    width: 100%;
+    height: auto;
+  }
 }
 
-.photo-post__img-panorama {
+.photo-post__image-link--panorama {
+  position: relative;
+  display: block;
   width: 100%;
+  text-decoration: none;
 }
 
-.photo-post__text {
-  padding: 17px 15px 16px 18px;
+.photo-post__image-link--panorama::before {
+  content: "Панорама дня";
+  position: absolute;
+  top: 0;
+  right: 20px;
+  z-index: 10;
+  display: block;
+  padding: 4px 10px;
+  padding-bottom: 8px;
+  min-width: 120px;
+  font-size: 12px;
+  font-weight: $bold;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $color--pink;
+}
+
+.photo-post__info {
+  padding-left: 18px;
+  padding-right: 15px;
+  padding-top: 17px;
+  padding-bottom: 16px;
   text-align: left;
+
   &--panorama {
     background-color: $color--gray;
   }
@@ -53,11 +86,198 @@
   padding: 0;
 }
 
-.foto-post__like {
+.photo-post__like-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+}
+
+.photo-post__heart {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 13px;
+  height: 24px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: url("../img/icon-heart.svg") no-repeat 50% 45%;
+}
+
+.photo-post__like {
+  align-self: center;
   display: block;
   margin-bottom: 5px;
-  padding-left: 32px;
   font-size: 12px;
   color: $color--pink;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet) {
+  .photo-post {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+    min-height: 455px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+
+  &--panorama {
+    margin: 0;
+    margin-bottom: 51px;
+    width: 100%;
+  }
+}
+
+  .photo-post__image-link {
+    display: block;
+    height: 300px;
+    overflow: hidden;
+
+    /*временно, пока нет картинки с нужными размерами*/
+    &--panorama {
+      display: block;
+      width: 100%;
+      height: 510px;
+      overflow: hidden;
+    }
+  }
+
+  .photo-post__img {
+    width: 300px;
+    height: 300px; /*временно*/
+
+    &--panorama {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .photo-post__image-link--panorama::before {
+    top: 57px;
+  }
+
+  .photo-post__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding-left: 27px;
+    padding-right: 28px;
+    padding-top: 22px;
+    padding-bottom: 24px;
+    min-height: 109px;
+
+    &--panorama {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      min-height: 74px;
+    }
+  }
+
+  .photo-post p {
+    margin: 0;
+  }
+
+  .photo-post__info--panorama p {
+    order: 1;
+  }
+
+  .photo-post__like-wrapper {
+    width: 241px;;
+
+    &--panorama {
+      width: 120px;
+    }
+  }
+
+  .photo-post__heart {
+    order: 1;
+  }
+
+  .photo-post__like {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop) {
+
+  .photo-post {
+    margin-bottom: 55px;
+    min-height: 555px;
+
+    &:nth-child(2n) {
+      margin-right: 20px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(1) {
+      margin-bottom: 20px;
+    }
+
+    &:nth-last-child(2) {
+      margin-bottom: 20px;
+    }
+
+    &:nth-last-child(3) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .photo-post--panorama:nth-last-child(2) {
+    margin-right: 0;
+  }
+
+  .photo-post__image-link {
+    height: 400px;
+
+    /*временно, пока нет картинки с нужными размерами*/
+    &--panorama {
+      height: 505px;
+    }
+  }
+
+  .photo-post__img {
+    width: 300px;
+    height: 400px; /*временно*/
+
+    &--panorama {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .photo-post__image-link--panorama::before {
+    top: 55px;
+    right: 130px;
+  }
+
+
+  .photo-post__info {
+    padding-bottom: 23px;
+
+    &--panorama {
+      margin-bottom: 32px;
+      padding-right: 30px;
+      padding-top: 24px;
+      padding-bottom: 23px;
+      min-height: 48px;
+    }
+  }
+
 }

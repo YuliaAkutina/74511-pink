@@ -59,3 +59,53 @@
 #slide-3:checked ~ .slider__controls label[for="slide-3"] {
   @include slide-active();
 }
+
+.reviews__toggler {
+  display: none;
+}
+
+@media (min-width: $tablet) {
+
+  .reviews {
+    padding-top: 40px;
+    padding-bottom: 25px;
+    font-size: 18px;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .reviews {
+    padding-top: 187px;
+    padding-bottom: 33px;
+  }
+
+  .reviews__label {
+    display: none;
+  }
+
+  .reviews-wrapper {
+    position: relative;
+  }
+
+  .reviews__toggler {
+    position: absolute;
+    top: 27px;
+    display: block;
+    width: 36px;
+    height: 42px;
+    font-size: 0;
+    text-decoration: none;
+    outline: 1px solid red;
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+
+}

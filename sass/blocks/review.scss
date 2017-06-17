@@ -13,7 +13,62 @@
   color: #000;
 }
 
+.review__about-author {
+  display: none;
+}
+
 .review p {
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: $tablet) {
+
+  .review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .review__author {
+    order: 1;
+    margin-bottom: 3px;
+    font-size: 20px;
+  }
+
+  .review__about-author {
+    display: block;
+    order: 2;
+    font-size: 14px;
+  }
+
+  .review p {
+    margin-bottom: 35px;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .review {
+    margin: 0 auto;
+    width: 690px;
+  }
+
+  .review__author {
+    font-size: 24px;
+  }
+
+  .review__about-author {
+    font-size: 18px;
+  }
+
+  .review-quotes {
+    display: none;
+  }
+
+  .review p {
+    margin-bottom: 36px;
+  }
+
 }

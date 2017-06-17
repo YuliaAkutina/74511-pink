@@ -10,10 +10,6 @@
   padding-bottom: 33px;
 }
 
-.advantages__header-inner {
-
-}
-
 .advantages__title {
   @include readers-only();
 }
@@ -31,6 +27,10 @@
   &:last-of-type {
     margin-bottom: 0;
   }
+}
+
+.advantages__items-container {
+  @include container();
 }
 
 .advantages__items {
@@ -63,9 +63,6 @@
   }
 }
 
-.advantages__items-inner {
-}
-
 .advantages__item {
   text-align: center;
   max-width: 100%;
@@ -85,4 +82,217 @@
   margin: 0;
   margin-bottom: 32px;
   padding: 0;
+}
+
+.advantages__item-descr br {
+  display: none;
+}
+
+.advantages__article {
+  display: none;
+}
+
+@media (min-width: $tablet) {
+
+  .advantages__header {
+    padding-top: 49px;
+    padding-bottom: 48px;
+  }
+
+  .advantage__intro {
+    margin-bottom: 0;
+    width: 100%;
+    font-size: 40px;
+
+    &:last-of-type {
+      width: 335px;
+    }
+  }
+
+  .advantages__items {
+    padding-top: 73px;
+    padding-bottom: 0;
+
+    &::before {
+      height: 52px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .advantages__items-container {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      z-index: 10;
+      width: 256px;
+      height: 278px;
+      /*Заменить картинку, как будет графика для планшетной версии*/
+      background: url("../img/iphone-screen-mobile@1x.png") no-repeat 0 0;
+      background-size: 157px auto;
+    }
+  }
+
+  .advantages__items-wrapper {
+    padding-left: 310px;
+  }
+
+  .advantages__item {
+    text-align: left;
+
+    &:last-child {
+      padding-bottom: 8px;
+    }
+  }
+
+  .advantages__item-descr {
+    margin-bottom: 35px;
+  }
+
+  .advantages__item-descr br {
+    display: inline;
+  }
+
+  .advantages__article {
+    display: block;
+  }
+
+  .asvantages__article-inner {
+    padding-top: 96px;
+    padding-bottom: 86px;
+    padding-left: 310px;
+  }
+
+  .advantages__article-title {
+    display: block;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: $bold;
+    color: #000;
+  }
+
+  .advantages__article-descr {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    width: 297px;
+  }
+
+  .advantages__article-link {
+    color: $color--pink;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .advantages {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .advantages__header {
+    padding-top: 67px;
+    padding-bottom: 75px;
+  }
+
+  .advantage__intro {
+    font-size: 50px;
+
+    &:last-of-type {
+      width: 420px;
+    }
+  }
+
+  .advantages__items {
+    padding-top: 0;
+    padding-bottom: 58px;
+
+    &::before {
+      top: 0;
+      left: 0;
+      height: 96px;
+      background: url("../img/bg-triangle-white.svg") no-repeat 50% 50%;
+    }
+  }
+
+  .advantages__items-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+  }
+
+  .advantages__items-container {
+    position: static;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .advantages__item {
+    margin-right: 20px;
+    padding-top: 359px;
+    width: 300px;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .advantages__item-title {
+    margin: 0 auto;
+    margin-bottom: 26px;
+    width: 225px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .advantages__item-descr {
+    margin: 0 auto;
+    width: 245px;
+  }
+
+  .advantages__item-descr br {
+    display: none;
+  }
+
+  .advantages__article {
+    background-color: $color--gray;
+  }
+
+  .asvantages__article-inner {
+    padding-top: 94px;
+    padding-bottom: 113px;
+    padding-left: 366px;
+  }
+
+  .advantages__article-title {
+    margin-bottom: 26px;
+    line-height: 30px;
+  }
+
+  .advantages__article-title br {
+    display: none;
+  }
+
+  .advantages__article-descr {
+    margin-bottom: 31px;
+    width: 530px;
+  }
+
+  .advantages__article-descr br {
+    display: none;
+  }
+
 }

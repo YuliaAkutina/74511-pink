@@ -23,3 +23,39 @@
   margin-bottom: 30px;
   text-align: center;
 }
+
+@media (min-width: $tablet) {
+
+  .photo {
+    font-size: 18px;
+  }
+
+  .photo__header {
+    padding-top: 91px;
+    padding-bottom: 75px;
+  }
+
+  .photo__intro {
+    margin: 0 auto;
+    width: 440px;
+  }
+
+  .photo__other-photos-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .photo__header {
+    padding-top: 92px;
+    padding-bottom: 88px;
+  }
+
+  .photo__intro {
+    width: 575px;
+  }
+
+}
