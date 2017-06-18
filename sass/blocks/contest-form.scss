@@ -9,6 +9,7 @@
 }
 
 .contest-form__header {
+  @include container();
   padding: 46px 0 35px 0;
 }
 
@@ -226,6 +227,7 @@
 }
 
 .contest-form__action {
+  @include container();
   text-align: center;
 }
 

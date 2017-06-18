@@ -6,6 +6,7 @@
 }
 
 .photo-editor__header {
+  @include container();
   padding: 40px 0;
   text-align: center;
 }
@@ -27,12 +28,15 @@
 }
 
 .photo-editor__photo-select {
-  @include container();
+  margin: 0 auto;
   margin-bottom: 33px;
+  width: 280px;
 }
 
 .foto-edito__filter-controls-wrapper {
-  @include container();
+  margin: 0 auto;
+  padding: 0;
+  width: 280px;
 }
 
 .photo-editor__filter-controls {
@@ -85,7 +89,9 @@
 }
 
 .photo-editor__action {
-  @include container ();
+  margin: 0 auto;
+  padding: 0;
+  width: 280px;
   padding-top: 37px;
   padding-bottom: 40px;
 

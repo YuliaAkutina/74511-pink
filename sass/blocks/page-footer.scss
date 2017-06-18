@@ -13,6 +13,7 @@
 
 .page-footer__wrapper {
   text-align: center;
+  @include container();
 }
 
 .page-footer__logo {
@@ -37,12 +38,13 @@
 .page-footer__copyright {
   margin: 0 auto;
   padding: 0;
-  width: 142px;
+  width: 140px;
 }
 
 .page-footer__copyright-link {
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 7px;
+  padding: 0;
   width: 40px;
   height: 42px;
   vertical-align: middle;
@@ -50,6 +52,7 @@
   color: $color--blue;
   text-decoration: none;
   background: url("../img/htmlacademy.svg") no-repeat 50% 50%;
+  background-size: 40px 42px;
 }
 
 @media (min-width: $tablet) {
@@ -80,14 +83,18 @@
   }
 
   .page-footer__copyright {
-    margin-right: 0;
+    margin: 0;
+    margin-left: auto;
     margin-top: 45px;
+    width: 143px;
+    text-align: right;
   }
 
   .page-footer__copyright-link {
-    margin-right: -21px;
-    margin-left: 5px;
-    background: url("../img/htmlacademy.svg") no-repeat 100% 100%;
+    margin-left: 3px;
+    width: 38px;
+    background: url("../img/htmlacademy.svg") no-repeat 50% 50%;
+    background-size: 38px 38px;
   }
 
 }
@@ -112,13 +119,13 @@
 
   .page-footer__copyright {
     margin-top: 82px;
-    width: 150px;
+    width: 158px;
   }
 
   .page-footer__copyright-link {
-    margin-right: -8px;
+    margin-right: 0;
     margin-left: 0;
-    background: url("../img/htmlacademy.svg") no-repeat 100% 100%;
+    background: url("../img/htmlacademy.svg") no-repeat 50% 50%;
   }
 
 }

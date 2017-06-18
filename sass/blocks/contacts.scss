@@ -8,6 +8,10 @@
   background-color: #fff;
 }
 
+.contacts__wrapper {
+  @include container();
+}
+
 .contacts__header {
   margin-bottom: 35px;
 }
