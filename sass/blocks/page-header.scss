@@ -70,6 +70,10 @@
   width: 75px;
   height: 22px;
 }
+/*Если отключен js, то логотип по центру*/
+.page-header--no-js .page-header__logo {
+  margin: 0 auto;
+}
 
 /*Меню открыто, крестик*/
 .page__header-toggler {
@@ -90,6 +94,11 @@
 
 /*Меню закрыто, прячем навигацию*/
 .page-header--menu-close .page-header__main-nav {
+  display: none;
+}
+
+/*Если отключен js, крестик не показывается*/
+.page-header--no-js .page__header-toggler {
   display: none;
 }
 
