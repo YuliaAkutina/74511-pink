@@ -52,6 +52,10 @@
   background-color: $color--pink;
 }
 
+.photo-post__info-wrapper {
+  @include container();
+}
+
 .photo-post__info {
   padding-left: 18px;
   padding-right: 15px;

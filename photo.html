@@ -7,7 +7,7 @@
       <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-      <header class="page-header"><!-- модификатор menu-close закрывает меню -->
+      <header class="page-header page-header--no-js"><!-- модификатор menu-close закрывает меню -->
         <div class="page-header__menu-wrapper">
           <div class="page-header__menu">
             <div class="page-header__menu-top">
@@ -34,13 +34,13 @@
       </header>
       <main>
         <section class="photo">
-          <header class="photo__header container">
+          <header class="photo__header">
             <h2 class="photo__title">Примеры фото наших пользователей</h2><!--скрыт-->
             <p class="photo__intro">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
           </header>
           <article class="photo-post photo-post--panorama photo__item">
             <a class="photo-post__image-link photo-post__image-link--panorama" href="#"><img class="photo-post__img photo-post__img--panorama" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Панорама дня"></a>
-            <div class="container">
+            <div class="photo-post__info-wrapper">
               <div class="photo-post__info photo-post__info--panorama">
                 <h3 class="photo-post__title">
                   <b class="photo-post__author">Анна</b>
@@ -54,7 +54,7 @@
               </div>
             </div>
           </article>
-          <div class="photo__other-photos-wrapper container">
+          <div class="photo__other-photos-wrapper">
             <article class="photo-post">
               <a class="photo-post__image-link" href="#"><img class="photo-post__img" src="img/photo-1-mobile@1x.jpg" width="280" height="180" alt="Машина"></a>
               <div class="photo-post__info">
@@ -154,7 +154,7 @@
           </div>
         </section>
         <section class="photo-editor">
-          <header class="photo-editor__header container">
+          <header class="photo-editor__header">
             <h2 class="photo-editor__title">Обработка и публикация ваших фото</h2><!--скрыт-->
             <p class="photo-editor__intro">Затмите их всех!</p>
             <p class="photo-editor__intro">Выкладывайте все, что накопилось в телефоне!</p>
@@ -205,22 +205,21 @@
         </section>
       </main>
       <footer class="page-footer">
-        <div class="container">
-          <div class="page-footer__wrapper">
-            <a class="page-footer__logo" href="index.html">
-              <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Пинк">
-            </a>
-            <p class="page-footer__social">
-              <span class="social-links">
-                <a class="social-link social-link--tw" href="#">Мы в Твиттере</a>
-                <a class="social-link social-link--fb" href="#">Мы в Фейсбуке</a>
-                <a class="social-link social-link--ytb" href="#">Мы на Ютуб</a>
-              </span>
-            </p>
-            <p class="page-footer__copyright">
-              Разработано<a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            </p>
-          </div>
+        <div class="page-footer__wrapper">
+          <a class="page-footer__logo" href="index.html">
+            <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Пинк">
+          </a>
+          <p class="page-footer__social">
+            <span class="social-links">
+              <a class="social-link social-link--tw" href="#">Мы в Твиттере</a>
+              <a class="social-link social-link--fb" href="#">Мы в Фейсбуке</a>
+              <a class="social-link social-link--ytb" href="#">Мы на Ютуб</a>
+            </span>
+          </p>
+          <p class="page-footer__copyright">
+            <span>Разработано</span><a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy.svg" width="40" height="42" alt="HTML Academy"></a>
+          </p>
+          </p>
         </div>
       </footer>
       <script src="js/script.js"></script>

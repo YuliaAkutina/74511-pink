@@ -10,6 +10,10 @@
   padding-bottom: 33px;
 }
 
+.advantages__header-inner {
+  @include container();
+}
+
 .advantages__title {
   @include readers-only();
 }
@@ -161,6 +165,10 @@
 
   .advantages__article {
     display: block;
+  }
+
+  .advantages__container {
+    @include container();
   }
 
   .asvantages__article-inner {
