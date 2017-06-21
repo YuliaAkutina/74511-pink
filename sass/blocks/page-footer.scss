@@ -26,6 +26,10 @@
   margin-bottom: 40px;
 }
 
+.page-footer__logo-pink {
+  position: static;
+}
+
 .page-footer__social {
   margin: 0;
   margin-left: auto;
@@ -40,7 +44,7 @@
   justify-content: space-between;
   margin: 0 auto;
   padding: 0;
-  width: 135px;
+  width: 139px;
   height: 42px;
 }
 
@@ -51,6 +55,14 @@
 .page-footer__copyright-link {
   color: $color--blue;
   text-decoration: none;
+}
+
+.page-footer__copyright-logo:hover .page-footer__copyright-logo-part {
+  fill: $color--blue;
+}
+
+.page-footer__copyright-logo:active .page-footer__copyright-logo-part {
+  fill-opacity: 0.3;
 }
 
 @media (min-width: $tablet) {
@@ -112,7 +124,7 @@
 
   .page-footer__copyright {
     margin-top: 82px;
-    width: 142px;
+    width: 150px;
   }
 
 }

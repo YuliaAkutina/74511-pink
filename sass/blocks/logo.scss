@@ -1,0 +1,124 @@
+.logo__tittle,
+.logo__glasses,
+.logo__glasses-full,
+.logo__glare {
+  display: none;
+}
+
+.logo__pink {
+  position: relative;
+  left: -72px;
+}
+
+/*На мобильной версии в футере очки не скрыты*/
+.logo__pink--invert .logo__glasses-full {
+  display: block;
+}
+
+/*Меняем цвета для логотипа в футере*/
+.logo__pink--invert .logo__text-part {
+  fill: $color--blue;
+}
+
+.logo__pink--invert .logo__glasses-part,
+.logo__pink--invert .logo__glasses-full-part {
+  fill: $color--pink;
+}
+
+.logo__pink--invert .logo__glare-part {
+  fill: $color--blue;
+}
+
+/*Взаимодействие с логотипом*/
+.logo__pink:hover .logo__text-part {
+  fill: $color--pink;
+}
+
+.logo__pink:active .logo__text-part {
+  fill: #fff;
+  fill-opacity: 0.3;
+}
+
+.logo__pink--invert:active .logo__text-part {
+  fill: $color--blue;
+  fill-opacity: 0.3;
+}
+
+.logo__pink--invert:active .logo__glasses-full-part {
+  fill: $color--pink;
+  fill-opacity: 0.3;
+}
+
+@media (min-width: $tablet) {
+
+  .logo__glasses-full {
+    display: block;
+  }
+
+  .logo__pink {
+    position: static;
+  }
+
+  .logo__pink:hover .logo__glasses-full-part {
+    fill: $color--pink;
+  }
+
+  .logo__pink:active .logo__glasses-full-part {
+    fill: #fff;
+    fill-opacity: 0.3;
+  }
+
+  .logo__pink--invert:active .logo__glasses-full-part {
+    fill: $color--pink;
+    fill-opacity: 0.3;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .logo__glasses-full {
+    display: none;
+  }
+
+  .logo__pink--invert .logo__glasses-full {
+    display: none;
+  }
+
+  .logo__tittle,
+  .logo__glasses,
+  .logo__glare {
+    display: block;
+  }
+
+  .logo__pink:hover .logo__glasses-part {
+    fill: $color--pink;
+  }
+
+  .logo__pink:active .logo__glasses-part {
+    fill: #fff;
+    fill-opacity: 0.3;
+  }
+
+  .logo__pink:active .logo__glare-part,
+  .logo__pink:active .logo__tittle-part {
+    fill: #fff;
+    fill-opacity: 0.3;
+  }
+
+  .logo__pink--invert:hover .logo__glare-part {
+    fill: $color--pink;
+  }
+
+  .logo__pink--invert:active .logo__glasses-part,
+  .logo__pink--invert:active .logo__tittle-part  {
+    fill: $color--pink;
+    fill-opacity: 0.3;
+  }
+
+  .logo__pink--invert:active .logo__glare-part {
+    fill: $color--blue;
+    fill-opacity: 0.3;
+  }
+
+}

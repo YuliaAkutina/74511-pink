@@ -1,7 +1,7 @@
 .reviews {
   margin: 0;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 43px;
+  padding-bottom: 8px;
   font-size: 14px;
   line-height: 30px;
   color: $color--blue;
@@ -69,7 +69,7 @@
 
   .reviews {
     padding-top: 40px;
-    padding-bottom: 25px;
+    padding-bottom: 0px;
     font-size: 18px;
   }
 
@@ -78,8 +78,21 @@
 @media (min-width: $desktop) {
 
   .reviews {
+    position: relative;
     padding-top: 187px;
-    padding-bottom: 33px;
+    padding-bottom: 35px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      margin-left: -40px;
+      top: 72px;
+      left: 50%;
+      width: 81px;
+      height: 66px;
+      background: url("../img/icon-quotes.svg") no-repeat 50% 50%;
+    }
   }
 
   .reviews__label {
@@ -94,19 +107,33 @@
     position: absolute;
     top: 27px;
     display: block;
-    width: 36px;
+    width: 32px;
     height: 42px;
     font-size: 0;
     text-decoration: none;
-    outline: 1px solid red;
+    cursor: pointer;
 
     &--prev {
       left: 0;
+      opacity: 0.3;
+      background: url("../img/icon-review-arrow-left.svg") no-repeat 0 50%;
     }
 
     &--next {
       right: 0;
+      opacity: 0.3;
+      background: url("../img/icon-review-arrow-right.svg") no-repeat 100% 50%;
     }
+  }
+
+  .reviews__toggler--prev:hover,
+  .reviews__toggler--next:hover {
+    opacity: 0.6;
+  }
+
+  .reviews__toggler--prev:active,
+  .reviews__toggler--next:active {
+    opacity: 0.1;
   }
 
 }
