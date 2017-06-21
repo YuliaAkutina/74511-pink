@@ -1,24 +1,13 @@
 .price {
   position: relative;
   padding: 0;
-  padding-top: 91px;
-  padding-bottom: 99px;
+  padding-top: 124px;
+  padding-bottom: 98px;
   font-size: 14px;
   line-height: 30px;
   color: $color--blue;
   text-transform: uppercase;
-  background: $color--gray;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 26px;
-    background: url("../img/bg-triangle-white.svg") no-repeat 50% 50%;
-  }
+  background: $color--gray url("../img/bg-triangle-white.svg") no-repeat 50% 0px;
 }
 
 .price__title-main {
@@ -76,6 +65,35 @@
   background-color: $color--blue;
 }
 
+.price__flag-hit {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 72px;
+    height: 74px;
+    background: url("../img/bg-hit.svg") no-repeat 0 0;
+
+  }
+
+  &::after {
+    content: "хит";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: $bold;
+    text-transform: uppercase;
+    color: #fff;
+    transform: rotate(-45deg);
+  }
+}
+
 .price__first-column {
   display: none;
 }
@@ -130,20 +148,19 @@
   background: url("../img/icon-yes.svg") no-repeat 50% 50%;
 
   &--off {
+    width: 36px;
+    height: 36px;
     background-image: url("../img/icon-no.svg");
     background-position: 50% 0;
+    background-size: auto;
   }
 }
 
 @media (min-width: $tablet) {
 
   .price {
-    padding-top: 82px;
+    padding-top: 108px;
     padding-bottom: 66px;
-
-    &::before {
-      height: 52px;
-    }
   }
 
   .price__label {
@@ -189,6 +206,18 @@
     padding-top: 13px;
     padding-bottom: 8px;
     width: 25%;
+  }
+
+  .price__flag-hit {
+
+    &::before {
+      background: url("../img/bg-hit-tablet.svg") no-repeat 0 0;
+    }
+
+    &::after {
+      top: 3px;
+      left: 6px;
+    }
   }
 
   .price__title {
@@ -237,10 +266,7 @@
     padding-top: 154px;
     padding-bottom: 95px;
     font-size: 18px;
-
-    &::before {
-      height: 98px;
-    }
+    background-size: contain;
   }
 
   .price__table-wrapper {
@@ -251,6 +277,19 @@
   .price__table th {
     padding-top: 17px;
     padding-bottom: 22px;
+  }
+
+  .price__flag-hit {
+
+    &::before {
+      width: 80px;
+      background: url("../img/bg-hit.svg") no-repeat 0 0;
+    }
+
+    &::after {
+      top: 10px;
+      left: 10px;
+    }
   }
 
   .price__title {
