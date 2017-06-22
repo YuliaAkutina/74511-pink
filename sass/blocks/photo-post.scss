@@ -104,12 +104,14 @@
   margin: 0;
   padding: 0;
   display: block;
-  width: 18px;
+  width: 16px;
   height: 24px;
   border: none;
   outline: none;
   cursor: pointer;
   background: url("../img/icon-heart.svg") no-repeat 50% 45%;
+  background-size: 13px 13px;
+
 }
 
 .photo-post__like {
