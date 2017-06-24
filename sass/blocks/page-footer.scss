@@ -44,7 +44,7 @@
   justify-content: space-between;
   margin: 0 auto;
   padding: 0;
-  width: 139px;
+  width: 132px;
   height: 42px;
 }
 
@@ -53,6 +53,8 @@
 }
 
 .page-footer__copyright-link {
+  margin-top: 5px;
+  height: 35px;
   color: $color--blue;
   text-decoration: none;
 }
