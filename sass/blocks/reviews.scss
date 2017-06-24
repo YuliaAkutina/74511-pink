@@ -106,6 +106,7 @@
   .reviews__toggler {
     position: absolute;
     top: 27px;
+    z-index: 10;
     display: block;
     width: 32px;
     height: 42px;
